@@ -23,3 +23,9 @@ Execute:
 ```bash
 git submodule update --remote themes/blogpaper
 ```
+
+## License
+
+The MIT License (MIT). Copyright (c) 2019 Erwan Normand <normand.erwan@protonmail.com>.
+
+See the [LICENSE](LICENSE) file for details.
