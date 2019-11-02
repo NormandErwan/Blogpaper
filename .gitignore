@@ -1,6 +1,9 @@
 # Hugo default output directory
 /public
 
+# NPM
+/node_modules
+
 ## OS Files
 # Windows
 Thumbs.db
