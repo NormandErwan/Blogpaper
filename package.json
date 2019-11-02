@@ -5,5 +5,8 @@
   "main": "theme.toml",
   "repository": "https://github.com/NormandErwan/blogpaper",
   "author": "Erwan Normand <normand.erwan@protonmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
 }
