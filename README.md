@@ -10,7 +10,13 @@ Get the theme:
 git submodule add https://github.com/NormandErwan/blogpaper themes/blogpaper
 ```
 
-Change you `config.toml`:
+Preview the example site:
+
+```bash
+hugo server -c themes/blogpaper/exampleSite/ -s themes/blogpaper/
+```
+
+Change your `config.toml`:
 
 ```toml
 theme = "blogpaper"
