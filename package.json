@@ -6,9 +6,13 @@
   "repository": "https://github.com/NormandErwan/blogpaper",
   "author": "Erwan Normand <normand.erwan@protonmail.com>",
   "license": "MIT",
+  "private": true,
   "dependencies": {
     "autoprefixer": "^9.7.1",
-    "normalize.css": "^8.0.1",
     "postcss-cli": "^6.1.3"
+  },
+  "workspaces": {
+    "packages": [ "assets/*" ],
+    "nohoist": [ "**" ]
   }
 }
