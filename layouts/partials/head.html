@@ -3,4 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-Compatible" content="ie=edge">
   <title>{{ .Site.Title }}</title>
+
+  {{ $blogpaper_css := resources.Get "css/blogpaper.css" -}}
+  {{- $style_files := slice $blogpaper_css -}}
+  {{- $style := $style_files | resources.Concat "css/main.css" | postCSS (dict "use" "autoprefixer" ) | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
