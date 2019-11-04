@@ -8,6 +8,8 @@ Get the theme:
 
 ```bash
 git submodule add https://github.com/NormandErwan/blogpaper themes/blogpaper
+cd themes/blogpaper
+yarn install
 ```
 
 Preview the example site:
@@ -28,6 +30,7 @@ Execute:
 
 ```bash
 git submodule update --remote themes/blogpaper
+yarn install
 ```
 
 ## License
