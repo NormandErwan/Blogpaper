@@ -9,6 +9,14 @@
   {{- end -}}
   </title>
 
+  {{- with .Description }}
+  <meta name="description" content="{{ . }}">
+  {{- else -}}
+  {{- with .Site.Params.description }}
+  <meta name="description" content="{{ . }}">
+  {{- end -}}
+  {{- end }}
+
   {{ $normalize_css := resources.Get "css/node_modules/normalize.css/normalize.css" -}}
   {{- $blogpaper_css := resources.Get "css/blogpaper.css" -}}
   {{- $css_files := slice $normalize_css $blogpaper_css -}}
