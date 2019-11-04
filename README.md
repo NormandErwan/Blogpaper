@@ -2,6 +2,8 @@
 
 > A newspaper like blog theme for Hugo.
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
+
 ## Install
 
 Get the theme:
