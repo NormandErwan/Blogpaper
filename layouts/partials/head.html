@@ -2,7 +2,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta http-equiv="x-ua-Compatible" content="ie=edge">
-  <title>{{ .Site.Title }}</title>
+  <title>
+  {{- block "title" . -}}
+    {{- if .Title -}}{{- .Title }} | {{ end -}}
+    {{- .Site.Title -}}
+  {{- end -}}
+  </title>
 
   {{ $normalize_css := resources.Get "css/node_modules/normalize.css/normalize.css" -}}
   {{- $blogpaper_css := resources.Get "css/blogpaper.css" -}}
