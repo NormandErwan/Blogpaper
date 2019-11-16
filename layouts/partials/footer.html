@@ -1,1 +1,9 @@
-footer
+<footer>
+  {{ block "footer" . -}}
+  {{ with .Site.Copyright }}
+  {{ . }}
+  {{ else }}
+  &copy; {{ now.Year }} <a href='{{ "" | relURL }}'>{{ .Site.Title }}</a>
+  {{ end }}
+  {{- end }}
+</footer>
