@@ -14,12 +14,6 @@ cd themes/blogpaper
 yarn install
 ```
 
-Preview the example site:
-
-```bash
-hugo server -c themes/blogpaper/exampleSite/ -s themes/blogpaper/
-```
-
 Change your `config.toml`:
 
 ```toml
