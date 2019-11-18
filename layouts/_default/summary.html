@@ -1,0 +1,11 @@
+<article>
+  <header>
+    <a href="{{ .Permalink }}">
+      <h2>{{ .Title }}</h2>
+      {{ partial "datetime.html" . }}
+    </a>
+  </header>
+  {{- with .Summary }}
+  <div>{{ . }}</div>
+  {{- end }}
+</article>
