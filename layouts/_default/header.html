@@ -1,0 +1,5 @@
+<header>
+  <h1>{{ .Title }}</h1>
+  {{ partial "datetime.html" . }}
+  {{- with .Summary }}<div>{{ . }}</div>{{- end }}
+</header>
