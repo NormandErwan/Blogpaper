@@ -1,3 +1,9 @@
 {{ define "main" }}
-  list
+  <section>
+    {{ .Render "header" }}
+    {{- $paginator := .Paginate .RegularPages -}}
+    {{- range $paginator.Pages }}
+      {{ .Render "summary" }}
+    {{- end }}
+  </section>
 {{ end }}
