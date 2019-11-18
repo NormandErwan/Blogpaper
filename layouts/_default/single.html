@@ -1,3 +1,10 @@
 {{ define "main" }}
-  single
+  <article>
+    <header>
+      <h1>{{ .Title }}</h1>
+      {{ partial "datetime.html" . }}
+      {{- with .Summary }}<div>{{ . }}</div>{{- end }}
+    </header>
+    {{ .Content }}
+  </article>
 {{ end }}
