@@ -1,3 +1,10 @@
 {{ define "main" }}
-  index
+  <section>
+    {{ .Render "header" }}
+    {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{- $paginator := .Paginate $pages -}}
+    {{- range $paginator.Pages }}
+      {{ .Render "summary" }}
+    {{- end }}
+  </section>
 {{ end }}
