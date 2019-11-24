@@ -6,19 +6,27 @@
 
 ## Install
 
-Get the theme:
+1. Get the theme:
 
-```bash
-git submodule add https://github.com/NormandErwan/blogpaper themes/blogpaper
-cd themes/blogpaper
-yarn install
-```
+    ```bash
+    git submodule add https://github.com/NormandErwan/blogpaper themes/blogpaper
+    cd themes/blogpaper
+    yarn install
+    ```
 
-Change your `config.toml`:
+2. Configure on your `config.toml`:
 
-```toml
-theme = "blogpaper"
-```
+    ```toml
+    theme = "blogpaper"
+    title = "" # Your blog title
+    copyright = "" # Optional copyright that will be displayed on footer
+
+    [params]
+      author = "" # Your name
+      datetimeFormat = "Mon 2 Jan 2006" # See https://gohugo.io/functions/format for examples
+      description = "" # The description of your site
+      mainSections = ["posts", "docs"] # List the sections (the subfolders) you want to display on the homepage
+    ```
 
 ## Upgrade
 
