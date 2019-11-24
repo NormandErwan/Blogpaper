@@ -1,9 +1,11 @@
 {{ define "main" }}
   <section>
     {{ .Render "header" }}
+
     {{- $paginator := .Paginate .RegularPages -}}
     {{- range $paginator.Pages }}
       {{ .Render "summary" }}
     {{- end }}
+    {{ template "_internal/pagination.html" . }}
   </section>
 {{ end }}
