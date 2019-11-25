@@ -22,5 +22,5 @@
   {{- $blogpaper_css := resources.Get "css/blogpaper.css" -}}
   {{- $css_files := slice $normalize_css $blogpaper_css -}}
   {{- $css := $css_files | resources.Concat "main.css" | postCSS (dict "use" "autoprefixer") | minify | fingerprint -}}
-  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
