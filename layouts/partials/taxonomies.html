@@ -1,0 +1,9 @@
+{{- with (index .Page.Params .term)}}
+  <ul>
+    {{- range . }}
+    {{- with $.Page.Site.GetPage (printf "/%s/%s" $.term (urlize .)) }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{- end }}
+    {{- end }}
+  </ul>
+{{- end }}
