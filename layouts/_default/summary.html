@@ -4,8 +4,11 @@
       <h2>{{ .Title }}</h2>
       {{ partial "datetime.html" . }}
     </a>
+    {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
   </header>
-  {{- with .Summary }}
-  <div>{{ . }}</div>
+  {{- if .Summary }}
+  <div>
+    <a href="{{ .Permalink }}">{{ .Summary }}</a>
+  </div>
   {{- end }}
 </article>
