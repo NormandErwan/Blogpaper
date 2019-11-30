@@ -3,7 +3,7 @@
   {{ $src := printf "%s" . }}
   {{- with $.Resources.GetMatch $src }}
     <figure>
-      <img src="{{ .RelPermalink }}" class="header-banner" />
+      <img src="{{ .RelPermalink }}" alt="{{ .Title }} header banner" class="header-banner" />
 
       {{- if or .Params.caption .Params.href }}
         <figcaption>
