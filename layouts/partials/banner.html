@@ -1,9 +1,9 @@
 {{- with .Params.banner }}
 
-  {{ $src := printf "%s" . }}
+  {{- $src := printf "%s" . }}
   {{- with $.Resources.GetMatch $src }}
     <figure>
-      <img src="{{ .RelPermalink }}" alt="{{ .Title }} header banner" class="header-banner" />
+      <img src="{{ .RelPermalink }}" alt="Header banner" class="header-banner" />
 
       {{- if or .Params.caption .Params.href }}
         <figcaption>
@@ -23,12 +23,12 @@
   {{- else }}
     {{- with $.Parent }}
       {{- partial "banner" . }}
-    {{ end }}
+    {{- end }}
   {{- end }}
 
 {{- else }}
   {{- if not (eq .Params.banner false) }}
-    {{ with .Parent }}
+    {{- with .Parent }}
       {{- partial "banner" . }}
     {{- end }}
   {{- end }}
