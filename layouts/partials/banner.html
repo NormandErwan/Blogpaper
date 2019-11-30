@@ -1,0 +1,35 @@
+{{- with .Params.banner }}
+
+  {{ $src := printf "%s" . }}
+  {{- with $.Resources.GetMatch $src }}
+    <figure>
+      <img src="{{ .RelPermalink }}" class="header-banner" />
+
+      {{- if or .Params.caption .Params.href }}
+        <figcaption>
+          {{- with .Params.href -}}
+          <a href="http://">
+          {{- end }}
+
+            {{- with .Params.caption -}} {{ . }} {{ end -}}
+
+          {{- with .Params.href -}}
+          </a>
+          {{- end }}
+        </figcaption>
+      {{- end }}
+    </figure>
+
+  {{- else }}
+    {{- with $.Parent }}
+      {{- partial "banner" . }}
+    {{ end }}
+  {{- end }}
+
+{{- else }}
+  {{- if not (eq .Params.banner false) }}
+    {{ with .Parent }}
+      {{- partial "banner" . }}
+    {{- end }}
+  {{- end }}
+{{- end }}
