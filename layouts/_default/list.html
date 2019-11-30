@@ -6,6 +6,7 @@
     {{- range $paginator.Pages }}
       {{ .Render "summary" }}
     {{- end }}
+
     {{ template "_internal/pagination.html" . }}
   </section>
 {{ end }}

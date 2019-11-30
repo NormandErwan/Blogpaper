@@ -1,7 +1,9 @@
 {{ define "main" }}
   <article>
     {{ .Render "header" }}
+
     {{ .Content }}
+
     {{- if .Params.tags }}
     <footer>
       {{- partial "taxonomies" (dict "Page" . "term" "tags") }}

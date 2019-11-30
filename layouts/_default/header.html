@@ -1,7 +1,9 @@
 <header>
   <h1>{{ .Title }}</h1>
   {{ partial "datetime.html" . }}
+
   {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
+
   {{- with .Summary }}
   <div>{{ . }}</div>
   {{- end }}
