@@ -2,10 +2,12 @@
   <section>
     {{ .Render "header" }}
 
+    <div class="content">
     {{- $paginator := .Paginate .RegularPages -}}
     {{- range $paginator.Pages }}
       {{ .Render "summary" }}
     {{- end }}
+    </div>
 
     {{ template "_internal/pagination.html" . }}
   </section>

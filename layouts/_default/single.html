@@ -2,7 +2,7 @@
   <article>
     {{ .Render "header" }}
 
-    {{ .Content }}
+    <div class="content">{{ .Content }}</div>
 
     {{- if .Params.tags }}
     <footer>
