@@ -1,0 +1,19 @@
+<figure>
+  <img src="{{ .RelPermalink }}" alt="Header banner" class="header-banner" />
+
+  {{- if or .Params.caption .Params.href }}
+    <figcaption>
+
+      {{- with .Params.href -}}
+      <a href="http://">
+      {{- end -}}
+
+        {{- with .Params.caption -}} {{ . }} {{- end -}}
+
+      {{- with .Params.href -}}
+      </a>
+      {{- end -}}
+
+    </figcaption>
+  {{- end }}
+</figure>
