@@ -6,7 +6,8 @@
 
 ## Install
 
-1. Get the theme:
+1. Make sure you're using the [Hugo extended](https://gohugo.io/getting-started/installing/) version.
+2. Get the theme:
 
     ```bash
     git submodule add https://github.com/NormandErwan/blogpaper themes/blogpaper
@@ -14,7 +15,7 @@
     yarn install
     ```
 
-2. Configure on your `config.toml`:
+3. Configure on your `config.toml`:
 
     ```toml
     theme = "blogpaper"
