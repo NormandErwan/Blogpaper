@@ -19,9 +19,18 @@
   {{/* If banner not explicitly deactivated on page (banner: `false` on front matter) */}}
   {{- if not (eq .Params.banner false) }}
 
-    {{/* Or try get parent banner */}}
-    {{- with .Parent }}
-      {{- partial "banner" . }}
+    {{/* Or try get the default banner resource */}}
+    {{- $src := $.Site.Params.banner | default "banner.*" -}}
+    {{- with $.Resources.GetMatch $src }}
+      {{- partial "banner-figure" . }}
+
+    {{- else }}
+
+      {{/* Or try get parent banner */}}
+      {{- with .Parent }}
+        {{- partial "banner" . }}
+      {{- end }}
+
     {{- end }}
 
   {{- end }}
