@@ -1,5 +1,5 @@
+{{ block "footer" . -}}
 <footer>
-  {{ block "footer" . -}}
   {{- with .Site.Copyright -}}
   {{ . }}
   {{- else -}}
@@ -7,5 +7,5 @@
   {{- with .Site.Params.author }} {{ . }}. {{ end -}}
   <a href='{{ "" | relURL }}'>{{ .Site.Title }}</a>
   {{- end -}}
-  {{- end }}
 </footer>
+{{- end }}
