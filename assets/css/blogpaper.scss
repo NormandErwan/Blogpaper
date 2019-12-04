@@ -1,7 +1,20 @@
+$font-size: {{ .Param "style.font-size" | default "2rem" }};
+$line-height: {{ .Param "style.line-height" | default "2" }};
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+  font-size: $font-size;
+  line-height: $line-height;
 }
 
 .header-banner {
