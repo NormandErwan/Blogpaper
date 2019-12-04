@@ -1,5 +1,6 @@
 $font-size: {{ .Param "style.font-size" | default "2rem" }};
 $line-height: {{ .Param "style.line-height" | default "2" }};
+$content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
 
 *,
 *::before,
@@ -22,6 +23,6 @@ body {
 }
 
 .content {
-  max-width: 800px;
+  max-width: $content-max-width;
   margin: auto;
 }
