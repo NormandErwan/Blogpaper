@@ -1,6 +1,6 @@
-{{ block "header" . -}}
+{{- block "header" . }}
 <header>
-  {{- partial "banner" . -}}
+  {{ partial "banner" . }}
 
   <h1>{{ .Title }}</h1>
   {{ partial "datetime.html" . }}
