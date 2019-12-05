@@ -1,5 +1,5 @@
 {{- with (index .Page.Params .term)}}
-  <ul>
+  <ul class="metadata">
     {{- range . }}
     {{- with $.Page.Site.GetPage (printf "/%s/%s" $.term (urlize .)) }}
     <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>

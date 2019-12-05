@@ -10,7 +10,7 @@
   {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
 
   {{- with .Summary }}
-  <div>{{ . }}</div>
+  <div class="metadata">{{ . }}</div>
   {{- end }}
 </header>
 {{- end }}

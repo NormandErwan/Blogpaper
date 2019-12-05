@@ -1,6 +1,6 @@
 {{- $datetime_format := .Site.Params.datetimeFormat | default "January 2, 2006" -}}
 {{- with .PublishDate -}}
-<time datetime='{{ . }}'>
+<time datetime='{{ . }}' class="metadata">
   {{- .Format $datetime_format -}}
 </time>
 {{- end -}}
