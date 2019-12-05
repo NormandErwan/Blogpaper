@@ -1,3 +1,4 @@
+$color: {{ .Param "style.color" | default "#333" }};
 $font-size: {{ .Param "style.font-size" | default "2rem" }};
 $line-height: {{ .Param "style.line-height" | default "2" }};
 $content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
@@ -26,6 +27,7 @@ body {
   font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
   font-size: $font-size;
   line-height: $line-height;
+  color: $color;
 }
 
 .header-banner {
