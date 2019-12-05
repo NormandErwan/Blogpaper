@@ -1,6 +1,7 @@
 $font-size: {{ .Param "style.font-size" | default "2rem" }};
 $line-height: {{ .Param "style.line-height" | default "2" }};
 $content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
+$nav-menu-item-margin: {{ .Param "style.nav.menu-item-margin" | default "10px" }};
 
 *,
 *::before,
@@ -20,6 +21,25 @@ body {
 
 .header-banner {
   max-height: 200px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $content-max-width;
+  margin: auto;
+
+  &__menu {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    word-break: keep-all;
+
+    &__item {
+      margin: $nav-menu-item-margin;
+    }
+  }
 }
 
 .content {
