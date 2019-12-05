@@ -1,7 +1,16 @@
 $font-size: {{ .Param "style.font-size" | default "2rem" }};
 $line-height: {{ .Param "style.line-height" | default "2" }};
 $content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
-$nav-menu-item-margin: {{ .Param "style.nav.menu-item-margin" | default "10px" }};
+$nav-menu-item-margin: {{ .Param "style.nav-menu-item-margin" | default "10px" }};
+$metadata-color: {{ .Param "style.metadata-color" | default "#717b8e" }};
+
+// From https://github.com/jonathantneal/system-font-css
+@font-face {
+  font-family: system-font;
+  font-style: normal;
+  font-weight: 400;
+  src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
 
 *,
 *::before,
@@ -45,4 +54,9 @@ body {
 .content {
   max-width: $content-max-width;
   margin: auto;
+}
+
+.metadata {
+  font-family: system-font;
+  color: $metadata-color;
 }
