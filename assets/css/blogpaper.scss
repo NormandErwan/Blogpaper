@@ -1,9 +1,20 @@
-$color: {{ .Param "style.color" | default "#333" }};
 $font-size: {{ .Param "style.font-size" | default "2rem" }};
 $line-height: {{ .Param "style.line-height" | default "2" }};
 $content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
 $nav-menu-item-margin: {{ .Param "style.nav-menu-item-margin" | default "10px" }};
-$metadata-color: {{ .Param "style.metadata-color" | default "#717b8e" }};
+
+{{- if eq .Site.Params.style.theme "dark" }}
+  $background-color: #111;
+  $color: #ccc;
+  $metadata-color: #999;
+{{- else }}
+  $background-color: #fff;
+  $color: #333;
+  $metadata-color: #666;
+{{- end }}
+
+{{- with .Param "style.color" -}} $color: {{ . }}; {{- end }}
+{{- with .Param "style.metadata-color" -}} $metadata-color: {{ . }}; {{- end }}
 
 // From https://github.com/jonathantneal/system-font-css
 @font-face {
@@ -27,6 +38,7 @@ body {
   font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
   font-size: $font-size;
   line-height: $line-height;
+  background-color: $background-color;
   color: $color;
 }
 
