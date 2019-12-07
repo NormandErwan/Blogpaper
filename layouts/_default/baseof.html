@@ -1,10 +1,10 @@
 <!doctype html>
 <html {{ with .Site.Language.Lang -}} lang="{{ . }}" {{- end }}>
-{{ partial "head.html" . }}
+{{ partial "head" . }}
 <body>
   <main>
     {{- block "main" . -}}{{- end -}}
   </main>
-  {{ partial "footer.html" . }}
+  {{ partial "footer" . }}
 </body>
 </html>
