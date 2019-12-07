@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article>
-    {{ .Render "header" }}
+    {{ partial "header" . }}
 
     <div class="container">
       <div class="content">{{ .Content }}</div>
