@@ -5,7 +5,7 @@
     <figcaption>
 
       {{- with .Params.href -}}
-      <a href="http://">
+      <a href="{{ . }}">
       {{- end -}}
 
         {{- with .Params.caption -}} {{ . }} {{- end -}}
