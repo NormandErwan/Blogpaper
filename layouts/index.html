@@ -2,16 +2,18 @@
   <section>
     {{ .Render "header" }}
 
-    <div class="content">
-    {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
-    {{- $paginator := .Paginate $pages -}}
-    {{- range $paginator.Pages }}
-      {{ .Render "summary" }}
-    {{- end }}
-    </div>
+    <div class="container">
+      <div class="content">
+      {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+      {{- $paginator := .Paginate $pages -}}
+      {{- range $paginator.Pages }}
+        {{ .Render "summary" }}
+      {{- end }}
+      </div>
 
-    <footer class="metadata">
-      {{ template "_internal/pagination.html" . }}
-    </footer>
+      <footer class="metadata">
+        {{ template "_internal/pagination.html" . }}
+      </footer>
+    </div>
   </section>
 {{ end }}

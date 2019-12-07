@@ -50,6 +50,11 @@ body {
   }
 }
 
+.container {
+  max-width: $content-max-width;
+  margin: auto;
+}
+
 .metadata {
   font-family: system-font;
   color: $metadata-color;
@@ -86,7 +91,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: $content-max-width;
   margin: auto;
 
   &__menu {
@@ -99,11 +103,4 @@ body {
       margin: $nav-menu-item-margin;
     }
   }
-}
-
-.content {
-  max-width: $content-max-width;
-  margin: auto;
-
-
 }

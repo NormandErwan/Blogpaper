@@ -2,12 +2,14 @@
   <article>
     {{ .Render "header" }}
 
-    <div class="content">{{ .Content }}</div>
+    <div class="container">
+      <div class="content">{{ .Content }}</div>
 
-    {{- if .Params.tags }}
-    <footer>
-      {{- partial "taxonomies" (dict "Page" . "term" "tags") }}
-    </footer>
-    {{- end }}
+      {{- if .Params.tags }}
+      <footer>
+        {{- partial "taxonomies" (dict "Page" . "term" "tags") }}
+      </footer>
+      {{- end }}
+    </div>
   </article>
 {{ end }}
