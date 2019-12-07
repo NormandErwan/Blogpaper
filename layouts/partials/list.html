@@ -1,0 +1,16 @@
+<section>
+  {{ .Page.Render "header" }}
+
+  <div class="container">
+    <div class="content">
+    {{- $paginator := .Page.Paginate .pages -}}
+    {{- range $paginator.Pages }}
+      {{ .Page.Render "summary" }}
+    {{- end }}
+    </div>
+
+    <footer class="metadata">
+      {{ template "_internal/pagination.html" .Page }}
+    </footer>
+  </div>
+</section>
