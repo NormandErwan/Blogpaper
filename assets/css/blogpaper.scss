@@ -42,8 +42,44 @@ body {
   color: $color;
 }
 
-.header-banner {
-  max-height: 200px;
+.banner {
+  margin: 0;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.metadata {
+  font-family: system-font;
+  color: $metadata-color;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+
+  &__banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & .banner {
+      width: 100%;
+      height: 100%;
+    }
+
+    & img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__above-banner {
+    position: relative;
+  }
 }
 
 .nav {
@@ -68,9 +104,6 @@ body {
 .content {
   max-width: $content-max-width;
   margin: auto;
-}
 
-.metadata {
-  font-family: system-font;
-  color: $metadata-color;
+
 }

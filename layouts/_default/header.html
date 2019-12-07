@@ -1,16 +1,20 @@
 {{- block "header" . }}
-<header>
-  {{ partial "nav" . }}
+<header class="header">
+  <div class="header__banner">
+    {{ partial "banner" . }}
+  </div>
 
-  {{ partial "banner" . }}
+  <div class="header__above-banner">
+    {{ partial "nav" . }}
 
-  <h1>{{ .Title }}</h1>
-  {{ partial "datetime.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{ partial "datetime.html" . }}
 
-  {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
+    {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
 
-  {{- with .Summary }}
-  <div class="metadata">{{ . }}</div>
-  {{- end }}
+    {{- with .Summary }}
+    <div class="metadata">{{ . }}</div>
+    {{- end }}
+  </div>
 </header>
 {{- end }}
