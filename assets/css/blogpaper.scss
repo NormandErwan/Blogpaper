@@ -1,11 +1,14 @@
 :root {
-  --font-size: {{ .Param "style.font-size" | default "2rem" }};
-  --line-height: {{ .Param "style.line-height" | default "2" }};
-  --content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
-  --nav-menu-item-margin: {{ .Param "style.nav-menu-item-margin" | default "10px" }};
   --background-color: #fff;
   --color: #333;
   --metadata-color: #666;
+  --font-size: {{ .Param "style.font-size" | default "2rem" }};
+  --line-height: {{ .Param "style.line-height" | default "2" }};
+  --nav-menu-item-margin: {{ .Param "style.nav.menu-item-margin" | default "1rem" }};
+  --header-margin: {{ .Param "style.header.margin" | default "0 0 3rem" }};
+  --header-padding: {{ .Param "style.header.padding" | default "4rem 0" }};
+  --content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
+  --content-padding: {{ .Param "style.content.padding" | default "1rem" }};
 }
 
 .theme--dark {
@@ -60,7 +63,7 @@ body {
 .container {
   max-width: var(--content-max-width);
   margin: auto;
-  padding: 0 1rem;
+  padding: var(--content-padding);
 }
 
 .metadata {
@@ -71,8 +74,8 @@ body {
 .header {
   position: relative;
   overflow: hidden;
-  margin-bottom: 4rem;
-  padding: 4rem 0;
+  margin: var(--header-margin);
+  padding: var(--header-padding);
 
   &__banner {
     position: absolute;
