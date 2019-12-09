@@ -1,7 +1,16 @@
 <!doctype html>
 <html {{ with .Site.Language.Lang -}} lang="{{ . }}" {{- end }}>
 {{ partial "head" . }}
-<body>
+
+{{ $themes := "" }}
+{{- with .Site.Params.theme -}}
+  {{- $themes = print $themes " theme--" . -}}
+{{- end -}}
+{{- if .Site.Params.style -}}
+  {{- $themes = print $themes " theme--custom" -}}
+{{- end -}}
+
+<body {{- with $themes }} class="{{ . }}"{{- end -}}>
   <main>
     {{- block "main" . -}}{{- end -}}
   </main>

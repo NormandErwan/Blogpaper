@@ -1,20 +1,26 @@
-$font-size: {{ .Param "style.font-size" | default "2rem" }};
-$line-height: {{ .Param "style.line-height" | default "2" }};
-$content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
-$nav-menu-item-margin: {{ .Param "style.nav-menu-item-margin" | default "10px" }};
+:root {
+  --font-size: {{ .Param "style.font-size" | default "2rem" }};
+  --line-height: {{ .Param "style.line-height" | default "2" }};
+  --content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
+  --nav-menu-item-margin: {{ .Param "style.nav-menu-item-margin" | default "10px" }};
+  --background-color: #fff;
+  --color: #333;
+  --metadata-color: #666;
+}
 
-{{- if eq .Site.Params.style.theme "dark" }}
-  $background-color: #111;
-  $color: #ccc;
-  $metadata-color: #999;
-{{- else }}
-  $background-color: #fff;
-  $color: #333;
-  $metadata-color: #666;
-{{- end }}
+.theme--dark {
+  --background-color: #111;
+  --color: #ccc;
+  --metadata-color: #999;
+}
 
-{{- with .Param "style.color" -}} $color: {{ . }}; {{- end }}
-{{- with .Param "style.metadata-color" -}} $metadata-color: {{ . }}; {{- end }}
+.theme--custom {
+  {{- range $key, $value := .Site.Params.style -}}
+    {{- if not (eq $key "theme") }}
+      --{{ $key }}: {{ $value }};
+    {{- end -}}
+  {{- end -}}
+}
 
 // From https://github.com/jonathantneal/system-font-css
 @font-face {
@@ -35,11 +41,12 @@ html {
 }
 
 body {
+  margin: 0;
   font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
-  font-size: $font-size;
-  line-height: $line-height;
-  background-color: $background-color;
-  color: $color;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: var(--background-color);
+  color: var(--color);
 }
 
 .banner {
@@ -51,13 +58,13 @@ body {
 }
 
 .container {
-  max-width: $content-max-width;
+  max-width: var(--content-max-width);
   margin: auto;
 }
 
 .metadata {
   font-family: system-font;
-  color: $metadata-color;
+  color: var(--metadata-color);
 }
 
 .header {
@@ -100,7 +107,7 @@ body {
     word-break: keep-all;
 
     &__item {
-      margin: $nav-menu-item-margin;
+      margin: var(--nav-menu-item-margin);
     }
   }
 }
