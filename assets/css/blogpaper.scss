@@ -2,13 +2,13 @@
   --background-color: #fff;
   --color: #333;
   --metadata-color: #666;
-  --font-size: {{ .Param "style.font-size" | default "2rem" }};
-  --line-height: {{ .Param "style.line-height" | default "2" }};
-  --nav-menu-item-margin: {{ .Param "style.nav.menu-item-margin" | default "1rem" }};
-  --header-margin: {{ .Param "style.header.margin" | default "0 0 3rem" }};
-  --header-padding: {{ .Param "style.header.padding" | default "4rem 0" }};
-  --content-max-width: {{ .Param "style.content.max-width" | default "700px" }};
-  --content-padding: {{ .Param "style.content.padding" | default "1rem" }};
+  --font-size: 2rem;
+  --line-height: 2;
+  --nav-menu-item-margin: 1rem;
+  --header-margin: 0 0 3rem;
+  --header-padding: 4rem 0;
+  --content-max-width: 700px;
+  --content-padding: 1rem;
 }
 
 .theme--dark {
@@ -19,9 +19,7 @@
 
 .theme--custom {
   {{- range $key, $value := .Site.Params.style -}}
-    {{- if not (eq $key "theme") }}
-      --{{ $key }}: {{ $value }};
-    {{- end -}}
+    --{{ $key }}: {{ $value }};
   {{- end -}}
 }
 
