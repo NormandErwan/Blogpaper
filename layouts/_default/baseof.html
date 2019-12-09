@@ -11,6 +11,7 @@
 {{- end -}}
 
 <body {{- with $themes }} class="{{ . }}"{{- end -}}>
+  {{ partial "nav" . }}
   <main>
     {{- block "main" . -}}{{- end -}}
   </main>

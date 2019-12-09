@@ -1,21 +1,23 @@
-<nav class="nav">
-  <a href="{{ .Site.Home.RelPermalink }}" class="nav__home">
-    {{- with .Site.Params.navHome -}}
-      {{- . -}}
-    {{- else -}}
-      {{- .Site.Title -}}
-    {{- end -}}
-  </a>
+<nav class="header-nav">
+  <div class="nav container">
+    <a href="{{ .Site.Home.RelPermalink }}" class="nav__home">
+      {{- with .Site.Params.navHome -}}
+        {{- . -}}
+      {{- else -}}
+        {{- .Site.Title -}}
+      {{- end -}}
+    </a>
 
-  {{- with .Site.Menus.main }}
-  <ul class="nav__menu">
-    {{- range . }}
-      <li class="nav__menu__item">
-        {{- .Pre -}}
-        <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-        {{- .Post -}}
-      </li>
+    {{- with .Site.Menus.main }}
+    <ul class="nav__menu">
+      {{- range . }}
+        <li class="nav__menu__item">
+          {{- .Pre -}}
+          <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+          {{- .Post -}}
+        </li>
+      {{- end }}
+    </ul>
     {{- end }}
-  </ul>
-  {{- end }}
+  </div>
 </nav>
