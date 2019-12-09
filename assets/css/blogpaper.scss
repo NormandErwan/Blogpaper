@@ -2,6 +2,8 @@
   --background-color: #fff;
   --color: #333;
   --metadata-color: #666;
+  --font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+  --metadata-font-family: system-font;
   --font-size: 2rem;
   --line-height: 2;
   --nav-menu-item-margin: 1rem;
@@ -43,7 +45,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
+  font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--line-height);
   background-color: var(--background-color);
@@ -65,7 +67,7 @@ body {
 }
 
 .metadata {
-  font-family: system-font;
+  font-family: var(--metadata-font-family);
   color: var(--metadata-color);
 }
 
