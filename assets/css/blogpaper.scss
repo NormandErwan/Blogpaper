@@ -7,15 +7,15 @@
   --font-size: 2rem;
   --line-height: 2;
 
+  --container-max-width: 700px;
+  --container-padding: 1rem;
+
   --nav-menu-item-margin: 1rem;
 
   --header-color: 255, 255, 255;
   --header-margin: 0 0 3rem 0;
   --header-padding: 5rem 0 4rem 0;
   --header__banner-above-background-opacity: 0.6;
-
-  --content-max-width: 700px;
-  --content-padding: 1rem;
 }
 
 .theme--dark {
@@ -66,9 +66,9 @@ body {
 }
 
 .container {
-  max-width: var(--content-max-width);
+  max-width: var(--container-max-width);
   margin: auto;
-  padding: var(--content-padding);
+  padding: var(--container-padding);
 }
 
 .metadata {
