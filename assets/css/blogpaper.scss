@@ -6,9 +6,14 @@
   --metadata-font-family: system-font;
   --font-size: 2rem;
   --line-height: 2;
+
   --nav-menu-item-margin: 1rem;
-  --header-margin: 0 0 3rem;
-  --header-padding: 4rem 0;
+
+  --header-color: 255, 255, 255;
+  --header-margin: 0 0 3rem 0;
+  --header-padding: 5rem 0 4rem 0;
+  --header__banner-above-background-opacity: 0.6;
+
   --content-max-width: 700px;
   --content-padding: 1rem;
 }
@@ -68,7 +73,6 @@ body {
 
 .metadata {
   font-family: var(--metadata-font-family);
-  color: var(--metadata-color);
 }
 
 .header {
@@ -93,10 +97,31 @@ body {
       height: 100%;
       object-fit: cover;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(at center, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.6));
+    }
   }
 
   &__above-banner {
     position: relative;
+    color: rgba(var(--header-color), 1);
+
+    & a {
+      color: rgba(var(--header-color), 1);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(var(--header-color), 0.5);
+    }
+
+    & a:hover {
+      border-bottom: 1px solid rgba(var(--header-color), 1);
+    }
   }
 }
 
@@ -122,5 +147,12 @@ body {
     &__item {
       margin: var(--nav-menu-item-margin);
     }
+  }
+}
+
+.content {
+
+  & .metadata {
+    color: var(--metadata-color);
   }
 }
