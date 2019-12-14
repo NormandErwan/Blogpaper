@@ -1,3 +1,7 @@
+@function to-rgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
 :root {
   --background-color: #fff;
   --color: #333;
@@ -12,7 +16,7 @@
 
   --nav-menu-item-margin: 1rem;
 
-  --header-color: 255, 255, 255;
+  --header-color: #{to-rgb(#fff)};
   --header-margin: 0 0 3rem 0;
   --header-padding: 5rem 0 4rem 0;
   --header__banner-above-background-opacity: 0.6;
