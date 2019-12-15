@@ -11,9 +11,9 @@
     </div>
 
     {{- with .Site.Menus.main }}
-    <ul class="nav__menu">
+    <ul class="inline-list">
       {{- range . }}
-        <li class="nav__menu__item">
+        <li class="inline-list__item">
           {{- .Pre -}}
           <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
           {{- .Post -}}

@@ -7,6 +7,7 @@
   --color-text: #333;
   --color-text-rgb: #{to-rgb(#333)};
   --color-metadata: #666;
+  --color-metadata-rgb: #{to-rgb(#666)};
   --color-link-underline-opacity: 0.5;
 
   --font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
@@ -101,6 +102,18 @@ a {
   color: var(--color-metadata);
 }
 
+.inline-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  word-break: keep-all;
+
+  &__item:not(:first-child) {
+    margin: var(--nav-menu-item-margin);
+  }
+}
+
 /* Nav */
 
 .nav {
@@ -123,17 +136,6 @@ a {
 
     &:hover {
       border-bottom-color: var(--header-color-text);
-    }
-  }
-
-  &__menu {
-    display: flex;
-    margin: 0;
-    list-style: none;
-    word-break: keep-all;
-
-    &__item {
-      margin: var(--nav-menu-item-margin);
     }
   }
 }
