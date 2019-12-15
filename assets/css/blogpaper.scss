@@ -98,6 +98,7 @@ a {
 
 .metadata {
   font-family: var(--font-family-metadata);
+  color: var(--color-metadata);
 }
 
 /* Nav */
@@ -148,6 +149,10 @@ a {
   background: var(--header-color-background);
   color: var(--header-color-text);
 
+  & .metadata {
+    color: var(--header-color-text);
+  }
+
   & a {
     color: var(--header-color-text);
     border-bottom-color: rgba(var(--header-color-text-rgb), var(--color-link-underline-opacity));
@@ -193,8 +198,4 @@ a {
 /* Content */
 
 .content {
-
-  & .metadata {
-    color: var(--color-metadata);
-  }
 }
