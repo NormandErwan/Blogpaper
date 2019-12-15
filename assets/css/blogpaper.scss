@@ -5,6 +5,7 @@
 :root {
   --background-color: #fff;
   --color: #333;
+  --color-rgb: #{to-rgb(#333)};
   --metadata-color: #666;
   --font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
   --metadata-font-family: system-font;
@@ -26,6 +27,7 @@
 .theme--dark {
   --background-color: #111;
   --color: #ccc;
+  --color-rgb: #{to-rgb(#ccc)};
   --metadata-color: #999;
 }
 
@@ -66,6 +68,16 @@ body {
 
 /* General items */
 
+a {
+  color: var(--color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--color-rgb), 0.5);
+
+  & :hover {
+    border-bottom-color: var(--color);
+  }
+}
+
 .banner {
   margin: 0;
 
@@ -101,16 +113,7 @@ body {
 
   & a {
     color: var(--header-color);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(var(--header-color-rgb), 0.5);
-  }
-
-  & a:hover {
-    border-bottom-color: var(--header-color);
-  }
-
-  &__home {
-    margin: var(--nav-menu-item-margin);
+    border-bottom-style: none;
   }
 
   &__menu {
@@ -132,6 +135,16 @@ body {
   overflow: hidden;
   margin: var(--header-margin);
   padding: var(--header-padding);
+  color: var(--header-color);
+
+  & a {
+    color: var(--header-color);
+    border-bottom-color: rgba(var(--header-color-rgb), 0.5);
+  }
+
+  & a:hover {
+    border-bottom-color: var(--header-color);
+  }
 
   &__banner {
     position: absolute;
@@ -163,17 +176,6 @@ body {
 
   &__above-banner {
     position: relative;
-    color: var(--header-color);
-
-    & a {
-      color: var(--header-color);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(var(--header-color-rgb), 0.5);
-    }
-
-    & a:hover {
-      border-bottom-color: var(--header-color);
-    }
   }
 }
 
