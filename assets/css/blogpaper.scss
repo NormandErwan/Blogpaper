@@ -14,7 +14,7 @@
   --font-size: 2rem;
   --line-height: 2;
 
-  --container-max-width: 700px;
+  --container-max-width: 75rem;
   --container-padding: 1rem;
 
   --nav-height: 8rem;
@@ -75,7 +75,7 @@ body {
 a {
   color: var(--color);
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--color-rgb), var(--a-underline-opacity));
+  border-bottom: 0.1rem solid rgba(var(--color-rgb), var(--a-underline-opacity));
 
   &:hover {
     border-bottom-color: var(--color);
