@@ -17,7 +17,7 @@
   --container-max-width: 700px;
   --container-padding: 1rem;
 
-  --nav-height: 6rem;
+  --nav-height: 8rem;
   --nav-menu-item-margin: 0 0 0 2rem;
 
   --header-color: #fff;
@@ -107,12 +107,12 @@ a {
   left: 0;
   z-index: 1;
   width: 100%;
-  height: var(--nav-height);
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: var(--nav-height);
   }
 
   & a {
