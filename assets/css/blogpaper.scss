@@ -22,7 +22,7 @@
   --header-color-rgb: #{to-rgb(#fff)};
   --header-margin-bottom: 3rem;
   --header-padding-bottom: 4rem;
-  --header__banner-above-background-opacity: 0.6;
+  --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
 }
 
 .theme--dark {
@@ -173,7 +173,7 @@ a {
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(at center, rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.6));
+      background: var(--header__banner-above-background);
     }
   }
 
