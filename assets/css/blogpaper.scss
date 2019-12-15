@@ -15,12 +15,13 @@
   --container-max-width: 700px;
   --container-padding: 1rem;
 
+  --nav-height: 6rem;
   --nav-menu-item-margin: 1rem;
 
   --header-color: #fff;
   --header-color-rgb: #{to-rgb(#fff)};
-  --header-margin: 0 0 3rem 0;
-  --header-padding: 5rem 0 4rem 0;
+  --header-margin-bottom: 3rem;
+  --header-padding-bottom: 4rem;
   --header__banner-above-background-opacity: 0.6;
 }
 
@@ -99,16 +100,17 @@ a {
 /* Nav */
 
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: var(--nav-height);
 
-  &--main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   & a {
@@ -133,8 +135,9 @@ a {
 .header {
   position: relative;
   overflow: hidden;
-  margin: var(--header-margin);
-  padding: var(--header-padding);
+  margin-bottom: var(--header-margin-bottom);
+  padding-top: var(--nav-height);
+  padding-bottom: var(--header-padding-bottom);
   color: var(--header-color);
 
   & a {
