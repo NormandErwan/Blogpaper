@@ -38,6 +38,11 @@
   --header-color-text-rgb: #{to-rgb(#fff)};
   --header-color-background: #333;
   --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
+
+  --figure-margin: 0 0 2rem 0;
+  --figcaption-margin: -0.5rem 0 0 0;
+  --figcaption-font-size: calc(0.9 * var(--font-size));
+  --wide-width-margin: 0 -10rem 0 -10rem;
 }
 
 .theme--dark {
@@ -75,6 +80,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden; // Hide .full-width
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: var(--font-line-height);
@@ -199,4 +205,36 @@ a {
 /* Content */
 
 .content {
+
+  figure {
+    margin: var(--figure-margin);
+    text-align: center;
+
+    & figcaption {
+      margin: var(--figcaption-margin);
+      font-size: var(--figcaption-font-size);
+    }
+
+    & figcaption > * {
+      margin: 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  // From https://css-tricks.com/full-width-containers-limited-width-parents/
+  .full-width {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    & img {
+      width: 100%;
+    }
+  }
 }
