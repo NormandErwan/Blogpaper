@@ -43,6 +43,8 @@
   --figcaption-margin: -0.5rem 0 0 0;
   --figcaption-font-size: calc(0.9 * var(--font-size));
   --wide-width-margin: 0 -10rem 0 -10rem;
+
+  --footer-font-size: calc(0.8 * var(--font-size));
 }
 
 .theme--dark {
@@ -237,4 +239,10 @@ a {
       width: 100%;
     }
   }
+}
+
+/* Footer */
+
+.footer {
+  font-size: var(--footer-font-size);
 }
