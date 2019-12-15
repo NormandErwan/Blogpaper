@@ -24,6 +24,7 @@
   --header-color-rgb: #{to-rgb(#fff)};
   --header-margin-bottom: 3rem;
   --header-padding-bottom: 4rem;
+  --header-background: #333;
   --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
 }
 
@@ -144,6 +145,7 @@ a {
   margin-bottom: var(--header-margin-bottom);
   padding-top: var(--nav-height);
   padding-bottom: var(--header-padding-bottom);
+  background: var(--header-background);
   color: var(--header-color);
 
   & a {
