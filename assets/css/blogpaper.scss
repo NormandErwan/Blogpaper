@@ -16,7 +16,8 @@
 
   --nav-menu-item-margin: 1rem;
 
-  --header-color: #{to-rgb(#fff)};
+  --header-color: #fff;
+  --header-color-rgb: #{to-rgb(#fff)};
   --header-margin: 0 0 3rem 0;
   --header-padding: 5rem 0 4rem 0;
   --header__banner-above-background-opacity: 0.6;
@@ -99,13 +100,13 @@ body {
   }
 
   & a {
-    color: rgba(var(--header-color), 1);
+    color: var(--header-color);
     text-decoration: none;
-    border-bottom: 1px solid rgba(var(--header-color), 0.5);
+    border-bottom: 1px solid rgba(var(--header-color-rgb), 0.5);
   }
 
   & a:hover {
-    border-bottom: 1px solid rgba(var(--header-color), 1);
+    border-bottom-color: var(--header-color);
   }
 
   &__home {
@@ -162,16 +163,16 @@ body {
 
   &__above-banner {
     position: relative;
-    color: rgba(var(--header-color), 1);
+    color: var(--header-color);
 
     & a {
-      color: rgba(var(--header-color), 1);
+      color: var(--header-color);
       text-decoration: none;
-      border-bottom: 1px solid rgba(var(--header-color), 0.5);
+      border-bottom: 1px solid rgba(var(--header-color-rgb), 0.5);
     }
 
     & a:hover {
-      border-bottom: 1px solid rgba(var(--header-color), 1);
+      border-bottom-color: var(--header-color);
     }
   }
 }
