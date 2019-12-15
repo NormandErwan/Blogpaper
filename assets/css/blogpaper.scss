@@ -2,6 +2,17 @@
   @return red($hex), green($hex), blue($hex);
 }
 
+@mixin set-links-color($color, $color-rgb, $color-link-underline-opacity) {
+  a {
+    color: $color;
+    border-bottom-color: rgba($color-rgb, $color-link-underline-opacity);
+
+    &:hover {
+      border-bottom-color: $color;
+    }
+  }
+}
+
 :root {
   --color-background: #fff;
   --color-text: #333;
@@ -100,6 +111,7 @@ a {
 .metadata {
   font-family: var(--font-family-metadata);
   color: var(--color-metadata);
+  @include set-links-color(var(--color-metadata), var(--color-metadata-rgb), var(--color-link-underline-opacity));
 }
 
 .inline-list {
@@ -123,20 +135,14 @@ a {
   z-index: 1;
   width: 100%;
 
+  color: var(--header-color-text);
+  @include set-links-color(var(--header-color-text), var(--header-color-text-rgb), 0);
+
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: var(--nav-height);
-  }
-
-  & a {
-    color: var(--header-color-text);
-    border-bottom-color: rgba(0,0,0,0);
-
-    &:hover {
-      border-bottom-color: var(--header-color-text);
-    }
   }
 }
 
@@ -149,19 +155,12 @@ a {
   padding-top: var(--nav-height);
   padding-bottom: var(--header-padding-bottom);
   background: var(--header-color-background);
+
   color: var(--header-color-text);
+  @include set-links-color(var(--header-color-text), var(--header-color-text-rgb), var(--color-link-underline-opacity));
 
   & .metadata {
     color: var(--header-color-text);
-  }
-
-  & a {
-    color: var(--header-color-text);
-    border-bottom-color: rgba(var(--header-color-text-rgb), var(--color-link-underline-opacity));
-
-    &:hover {
-      border-bottom-color: var(--header-color-text);
-    }
   }
 
   &__banner {
