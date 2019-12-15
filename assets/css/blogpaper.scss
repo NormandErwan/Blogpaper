@@ -39,6 +39,9 @@
   --header-color-background: #333;
   --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
 
+  --summary-margin-bottom: var(--header-margin-bottom);
+  --summary__header-height: 25rem;
+
   --figure-margin: 0 0 2rem 0;
   --figcaption-margin: -0.5rem 0 0 0;
   --figcaption-font-size: calc(0.9 * var(--font-size));
@@ -159,11 +162,7 @@ a {
 .header {
   position: relative;
   overflow: hidden;
-  margin-bottom: var(--header-margin-bottom);
-  padding-top: var(--nav-height);
-  padding-bottom: var(--header-padding-bottom);
   background: var(--header-color-background);
-
   color: var(--header-color-text);
   @include set-links-color(var(--header-color-text), var(--header-color-text-rgb), var(--color-link-underline-opacity));
 
@@ -171,17 +170,12 @@ a {
     color: var(--header-color-text);
   }
 
-  &__banner {
+  & .banner {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
-    & .banner {
-      width: 100%;
-      height: 100%;
-    }
 
     & img {
       height: 100%;
@@ -199,14 +193,30 @@ a {
     }
   }
 
-  &__above-banner {
+  & *:not(.banner) {
     position: relative;
   }
 }
 
-/* Content */
+.header--main {
+  margin-bottom: var(--header-margin-bottom);
+  padding-top: var(--nav-height);
+  padding-bottom: var(--header-padding-bottom);
+}
 
-.content {
+/* Posts list */
+
+.summary {
+  margin-bottom: var(--summary-margin-bottom);
+
+  .header {
+    height: var(--summary__header-height);
+  }
+}
+
+/* Post */
+
+.post {
 
   figure {
     margin: var(--figure-margin);

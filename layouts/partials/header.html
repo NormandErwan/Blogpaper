@@ -1,9 +1,7 @@
-<header class="header">
-  <div class="header__banner">
-    {{ partial "banner" . }}
-  </div>
+<header class="header header--main">
+  {{ partial "banner" . }}
 
-  <div class="header__above-banner container">
+  <div class="container">
     <h1>{{ .Title }}</h1>
     {{ partial "datetime.html" . }}
 
