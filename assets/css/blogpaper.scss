@@ -7,6 +7,8 @@
   --color: #333;
   --color-rgb: #{to-rgb(#333)};
   --metadata-color: #666;
+  --a-underline-opacity: 0.5;
+
   --font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
   --metadata-font-family: system-font;
   --font-size: 2rem;
@@ -16,7 +18,7 @@
   --container-padding: 1rem;
 
   --nav-height: 6rem;
-  --nav-menu-item-margin: 1rem;
+  --nav-menu-item-margin: 0 0 0 2rem;
 
   --header-color: #fff;
   --header-color-rgb: #{to-rgb(#fff)};
@@ -72,9 +74,9 @@ body {
 a {
   color: var(--color);
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--color-rgb), 0.5);
+  border-bottom: 1px solid rgba(var(--color-rgb), var(--a-underline-opacity));
 
-  & :hover {
+  &:hover {
     border-bottom-color: var(--color);
   }
 }
@@ -115,7 +117,11 @@ a {
 
   & a {
     color: var(--header-color);
-    border-bottom-style: none;
+    border-bottom-color: rgba(0,0,0,0);
+
+    &:hover {
+      border-bottom-color: var(--header-color);
+    }
   }
 
   &__menu {
@@ -142,11 +148,11 @@ a {
 
   & a {
     color: var(--header-color);
-    border-bottom-color: rgba(var(--header-color-rgb), 0.5);
-  }
+    border-bottom-color: rgba(var(--header-color-rgb), var(--a-underline-opacity));
 
-  & a:hover {
-    border-bottom-color: var(--header-color);
+    &:hover {
+      border-bottom-color: var(--header-color);
+    }
   }
 
   &__banner {
