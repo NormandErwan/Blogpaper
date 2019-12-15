@@ -1,8 +1,10 @@
 {{- with (index .Page.Params .term)}}
-  <ul class="metadata">
+  <ul class="metadata inline-list">
     {{- range . }}
     {{- with $.Page.Site.GetPage (printf "/%s/%s" $.term (urlize .)) }}
-    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <li class="inline-list__item">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
     {{- end }}
     {{- end }}
   </ul>
