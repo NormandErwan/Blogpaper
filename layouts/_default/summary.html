@@ -2,7 +2,7 @@
   <header class="header">
     {{- partial "banner" . }}
 
-    <div class="header__metadata">
+    <div class="header__metadata inline-list">
       {{ partial "datetime.html" . }}
 
       <div class="header__categories">
@@ -10,7 +10,9 @@
       </div>
     </div>
 
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <h2 class="header__title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
   </header>
 
   {{- with .Summary }}

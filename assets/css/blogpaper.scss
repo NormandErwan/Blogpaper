@@ -27,7 +27,6 @@
   --font-line-height: 2;
 
   --inline-list__item-margin: 0 0 0 2rem;
-
   --container-padding: 1rem;
 
   --nav-max-width: 110rem;
@@ -39,6 +38,7 @@
   --header-color-text: #fff;
   --header-color-text-rgb: #{to-rgb(#fff)};
   --header-color-background: #333;
+  --header-title-margin: 0;
   --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
 
   --content-max-width: 75rem;
@@ -180,6 +180,14 @@ a {
   background: var(--header-color-background);
   color: var(--header-color-text);
   @include set-links-color(var(--header-color-text), var(--header-color-text-rgb), var(--color-link-underline-opacity));
+
+  &__title {
+    margin: var(--header-title-margin);
+
+    & a {
+      border-bottom: none;
+    }
+  }
 
   & .metadata {
     color: var(--header-color-text);

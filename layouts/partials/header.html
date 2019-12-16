@@ -2,7 +2,7 @@
   {{ partial "banner" . }}
 
   <div class="container">
-    <div class="header__metadata">
+    <div class="header__metadata inline-list">
       {{ partial "datetime.html" . }}
 
       <div class="header__categories">
@@ -10,7 +10,7 @@
       </div>
     </div>
 
-    <h1>{{ .Title }}</h1>
+    <h1 class="header__title">{{ .Title }}</h1>
 
     {{- with .Summary }}
     <div class="header__summary metadata">{{ . }}</div>
