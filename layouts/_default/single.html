@@ -6,7 +6,7 @@
       <div class="content">{{ .Content }}</div>
 
       {{- if .Params.tags }}
-      <footer>
+      <footer class="footer">
         {{- partial "taxonomies" (dict "Page" . "term" "tags") }}
       </footer>
       {{- end }}

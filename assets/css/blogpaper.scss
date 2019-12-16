@@ -51,6 +51,7 @@
   --wide-width-margin: 0 -10rem 0 -10rem;
 
   --footer-font-size: calc(0.8 * var(--font-size));
+  --footer-margin-top: var(--header-margin-bottom);
 }
 
 .theme--dark {
@@ -264,6 +265,22 @@ a {
 
 /* Footer */
 
-.footer {
+.pagination {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+
+  & .page-item:not(:first-child) {
+    margin: var(--inline-list__item-margin);
+  }
+
+  & .disabled a {
+    border-bottom: none;
+  }
+}
+
+.footer--main {
   font-size: var(--footer-font-size);
+  margin-top: var(--footer-margin-top);
 }
