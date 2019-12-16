@@ -26,11 +26,12 @@
   --font-size: 2rem;
   --font-line-height: 2;
 
+  --inline-list__item-margin: 0 0 0 2rem;
+
   --container-padding: 1rem;
 
   --nav-max-width: 110rem;
   --nav-height: 8rem;
-  --nav-menu-item-margin: 0 0 0 2rem;
 
   --header-max-width: 75rem;
   --header-margin-bottom: 3rem;
@@ -137,7 +138,7 @@ a {
   word-break: keep-all;
 
   &__item:not(:first-child) {
-    margin: var(--nav-menu-item-margin);
+    margin: var(--inline-list__item-margin);
   }
 }
 
@@ -264,21 +265,6 @@ a {
 }
 
 /* Footer */
-
-.pagination {
-  display: flex;
-  padding: 0;
-  list-style: none;
-  justify-content: center;
-
-  & .page-item:not(:first-child) {
-    margin: var(--inline-list__item-margin);
-  }
-
-  & .disabled a {
-    border-bottom: none;
-  }
-}
 
 .footer--main {
   font-size: var(--footer-font-size);
