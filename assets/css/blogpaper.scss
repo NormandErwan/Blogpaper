@@ -26,18 +26,21 @@
   --font-size: 2rem;
   --font-line-height: 2;
 
-  --container-max-width: 75rem;
   --container-padding: 1rem;
 
+  --nav-max-width: 110rem;
   --nav-height: 8rem;
   --nav-menu-item-margin: 0 0 0 2rem;
 
+  --header-max-width: 75rem;
   --header-margin-bottom: 3rem;
   --header-padding-bottom: 4rem;
   --header-color-text: #fff;
   --header-color-text-rgb: #{to-rgb(#fff)};
   --header-color-background: #333;
   --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
+
+  --content-max-width: 75rem;
 
   --summary-margin-bottom: var(--header-margin-bottom);
   --summary__header-height: 25rem;
@@ -114,7 +117,7 @@ a {
 }
 
 .container {
-  max-width: var(--container-max-width);
+  max-width: var(--content-max-width);
   margin: auto;
   padding: var(--container-padding);
 }
@@ -148,6 +151,10 @@ a {
 
   color: var(--header-color-text);
   @include set-links-color(var(--header-color-text), var(--header-color-text-rgb), 0);
+
+  & .container {
+    max-width: var(--nav-max-width);
+  }
 
   &__content {
     display: flex;
@@ -202,6 +209,10 @@ a {
   margin-bottom: var(--header-margin-bottom);
   padding-top: var(--nav-height);
   padding-bottom: var(--header-padding-bottom);
+
+  & .container {
+    max-width: var(--header-max-width);
+  }
 }
 
 /* Posts list */
