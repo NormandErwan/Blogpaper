@@ -130,15 +130,21 @@ a {
   @include set-links-color(var(--color-metadata), var(--color-metadata-rgb), var(--color-link-underline-opacity));
 }
 
-.inline-list {
+.inline-list,
+.pagination {
   display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
   word-break: keep-all;
 
-  &__item:not(:first-child) {
+  &__item:not(:first-child),
+  & .page-item:not(:first-child) {
     margin: var(--inline-list__item-margin);
+  }
+
+  & .disabled a {
+    border-bottom: none;
   }
 }
 
