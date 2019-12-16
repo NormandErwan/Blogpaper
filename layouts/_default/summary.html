@@ -2,17 +2,18 @@
   <header class="header">
     {{- partial "banner" . }}
 
-    <a href="{{ .RelPermalink }}">
-      <h2>{{ .Title }}</h2>
+    <div class="header__metadata">
       {{ partial "datetime.html" . }}
-    </a>
 
-    {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
+      <div class="header__categories">
+        {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
+      </div>
+    </div>
+
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   </header>
 
-  {{- if .Summary }}
-  <div class="metadata">
-    <a href="{{ .RelPermalink }}">{{ .Summary }}</a>
-  </div>
+  {{- with .Summary }}
+  <div class="header__summary metadata">{{ . }}</div>
   {{- end }}
 </article>

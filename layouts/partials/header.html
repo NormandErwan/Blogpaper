@@ -2,13 +2,18 @@
   {{ partial "banner" . }}
 
   <div class="container">
-    <h1>{{ .Title }}</h1>
-    {{ partial "datetime.html" . }}
+    <div class="header__metadata">
+      {{ partial "datetime.html" . }}
 
-    {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
+      <div class="header__categories">
+        {{- partial "taxonomies" (dict "Page" . "term" "categories") }}
+      </div>
+    </div>
+
+    <h1>{{ .Title }}</h1>
 
     {{- with .Summary }}
-    <div class="metadata">{{ . }}</div>
+    <div class="header__summary metadata">{{ . }}</div>
     {{- end }}
   </div>
 </header>
