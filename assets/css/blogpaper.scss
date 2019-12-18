@@ -2,13 +2,13 @@
   @return red($hex), green($hex), blue($hex);
 }
 
-@mixin set-links-color($color-rgb, $color-link-underline-opacity) {
+@mixin set-links-color($color-rgb, $link-underline-opacity, $color-opacity: 1) {
   a {
-    color: rgba($color-rgb, 1);
-    border-bottom-color: rgba($color-rgb, $color-link-underline-opacity);
+    color: rgba($color-rgb, $color-opacity);
+    border-bottom-color: rgba($color-rgb, $link-underline-opacity);
 
     &:hover {
-      border-bottom-color: rgba($color-rgb, 1);
+      border-bottom-color: rgba($color-rgb, $color-opacity);
     }
   }
 }
