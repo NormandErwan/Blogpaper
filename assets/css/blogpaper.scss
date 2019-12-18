@@ -45,7 +45,7 @@
   --header--main-color-text: #fff;
   --header--main-color-text-rgb: #{to-rgb(#fff)};
   --header--main-color-background: #333;
-  --header__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
+  --header--main__banner-above-background: radial-gradient(at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4));
 
   --content-max-width: 75rem;
 
@@ -260,7 +260,7 @@ a {
       left: 0;
       width: 100%;
       height: 100%;
-      background: var(--header__banner-above-background);
+      background: var(--header--main__banner-above-background);
     }
   }
 
