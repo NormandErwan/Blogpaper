@@ -2,7 +2,7 @@
   <img src="{{ .RelPermalink }}" alt="Header banner" />
 
   {{- if or .Params.caption .Params.href }}
-    <figcaption>
+    <figcaption class="metadata">
 
       {{- with .Params.href -}}
       <a href="{{ . }}">
