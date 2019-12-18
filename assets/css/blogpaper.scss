@@ -216,13 +216,6 @@ a {
   color: var(--header--main-color-text);
   @include set-links-color(var(--header--main-color-text), var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
 
-  &__title {
-
-    & a {
-      border-bottom: none;
-    }
-  }
-
   &__categories {
 
     & .inline-list__item::before {
