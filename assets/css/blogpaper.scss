@@ -275,7 +275,7 @@ a {
 
 .post {
 
-  figure {
+  & figure {
     margin: var(--figure-margin);
     text-align: center;
 
@@ -289,12 +289,12 @@ a {
     }
   }
 
-  img {
+  & img {
     max-width: 100%;
   }
 
   // From https://css-tricks.com/full-width-containers-limited-width-parents/
-  .full-width {
+  & .full-width {
     position: relative;
     left: 50%;
     right: 50%;
