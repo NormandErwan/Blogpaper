@@ -136,10 +136,10 @@ a {
 .inline-list,
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
-  word-break: keep-all;
 
   &__item:not(:first-child),
   & .page-item:not(:first-child) {
@@ -188,6 +188,7 @@ a {
   }
 
   &__categories {
+    flex: 1;
 
     & .inline-list__item {
       margin-left: var(--header__categories_inline-list__item-margin-left);
