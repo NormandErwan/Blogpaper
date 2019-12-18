@@ -257,7 +257,7 @@ a {
     }
   }
 
-  & *:not(.banner) {
+  & > *:not(.banner) {
     position: relative;
   }
 
