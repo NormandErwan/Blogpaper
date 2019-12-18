@@ -38,6 +38,7 @@
   --header__categories_inline-list__item-margin-left: 1rem;
   --header__banner__figcaption_padding: 0.5rem 1rem;
   --header__banner__figcaption_font-size: calc(0.7 * var(--font-size));
+  --header__banner__figcaption_opacity: 0.7;
 
   --header--main-max-width: 75rem;
   --header--main-margin-bottom: 3rem;
@@ -133,7 +134,7 @@ a {
     padding: var(--header__banner__figcaption_padding);
     font-size: var(--header__banner__figcaption_font-size);
     color: var(--header--main-color-text);
-    @include set-links-color(var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
+    @include set-links-color(var(--header--main-color-text-rgb), var(--color-link-underline-opacity), var(--header__banner__figcaption_opacity));
   }
 }
 
