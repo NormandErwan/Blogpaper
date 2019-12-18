@@ -32,7 +32,8 @@
   --nav-max-width: 110rem;
   --nav-height: 8rem;
 
-  --header__title-margin: -0.5rem 0 0 0;
+  --header__title-line-height: calc(0.8 * var(--font-line-height));
+  --header__title-margin: 0 0 0.5rem  0;
   --header__metadata-font-size: calc(0.9 * var(--font-size));
   --header__categories_inline-list__item-margin-left: 1rem;
 
@@ -181,6 +182,7 @@ a {
 
   &__title {
     margin: var(--header__title-margin);
+    line-height: var(--header__title-line-height);
   }
 
   &__metadata {
