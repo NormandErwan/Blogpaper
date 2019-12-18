@@ -33,9 +33,11 @@
   --nav-height: 8rem;
 
   --header__title-line-height: calc(0.8 * var(--font-line-height));
-  --header__title-margin: 0 0 0.5rem  0;
+  --header__title-margin: 0 0 0.5rem 0;
   --header__metadata-font-size: calc(0.9 * var(--font-size));
   --header__categories_inline-list__item-margin-left: 1rem;
+  --header__banner__figcaption_padding: 0.5rem 1rem;
+  --header__banner__figcaption_font-size: calc(0.7 * var(--font-size));
 
   --header--main-max-width: 75rem;
   --header--main-margin-bottom: 3rem;
@@ -115,10 +117,22 @@ a {
 }
 
 .banner {
+  position: relative;
   margin: 0;
 
   & img {
     width: 100%;
+  }
+
+  & figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    padding: var(--header__banner__figcaption_padding);
+    font-size: var(--header__banner__figcaption_font-size);
+    color: var(--header--main-color-text);
+    @include set-links-color(var(--header--main-color-text), var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
   }
 }
 
@@ -273,7 +287,7 @@ a {
 
 /* Post */
 
-.post {
+.post .content {
 
   & figure {
     margin: var(--figure-margin);
