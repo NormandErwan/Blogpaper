@@ -2,13 +2,13 @@
   @return red($hex), green($hex), blue($hex);
 }
 
-@mixin set-links-color($color, $color-rgb, $color-link-underline-opacity) {
+@mixin set-links-color($color-rgb, $color-link-underline-opacity) {
   a {
-    color: $color;
+    color: rgba($color-rgb, 1);
     border-bottom-color: rgba($color-rgb, $color-link-underline-opacity);
 
     &:hover {
-      border-bottom-color: $color;
+      border-bottom-color: rgba($color-rgb, 1);
     }
   }
 }
@@ -66,6 +66,7 @@
   --color-text: #ccc;
   --color-text-rgb: #{to-rgb(#ccc)};
   --color-metadata: #999;
+  --color-metadata: #{to-rgb(#999)};
 }
 
 .theme--custom {
@@ -132,7 +133,7 @@ a {
     padding: var(--header__banner__figcaption_padding);
     font-size: var(--header__banner__figcaption_font-size);
     color: var(--header--main-color-text);
-    @include set-links-color(var(--header--main-color-text), var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
+    @include set-links-color(var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
   }
 }
 
@@ -145,7 +146,7 @@ a {
 .metadata {
   font-family: var(--font-family-metadata);
   color: var(--color-metadata);
-  @include set-links-color(var(--color-metadata), var(--color-metadata-rgb), var(--color-link-underline-opacity));
+  @include set-links-color(var(--color-metadata-rgb), var(--color-link-underline-opacity));
 }
 
 .inline-list,
@@ -176,7 +177,7 @@ a {
   width: 100%;
 
   color: var(--header--main-color-text);
-  @include set-links-color(var(--header--main-color-text), var(--header--main-color-text-rgb), 0);
+  @include set-links-color(var(--header--main-color-text-rgb), 0);
 
   & .container {
     max-width: var(--nav-max-width);
@@ -228,7 +229,7 @@ a {
   padding-bottom: var(--header--main-padding-bottom);
   background: var(--header--main-color-background);
   color: var(--header--main-color-text);
-  @include set-links-color(var(--header--main-color-text), var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
+  @include set-links-color(var(--header--main-color-text-rgb), var(--color-link-underline-opacity));
 
   &__categories {
 
