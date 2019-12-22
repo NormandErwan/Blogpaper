@@ -19,18 +19,26 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
     yarn install
     ```
 
-4. Configure on your `config.toml`:
+4. Configure on your `config.yaml`:
 
-    ```toml
-    theme = "blogpaper"
-    title = "" # Your blog title
-    copyright = "" # Optional copyright that will be displayed on footer
-
-    [params]
-      author = "" # Your name
-      datetimeFormat = "Mon 2 Jan 2006" # See https://gohugo.io/functions/format for examples
-      description = "" # The description of your site
-      mainSections = ["posts", "docs"] # List the sections (the subfolders) you want to display on the homepage
+    ```yaml
+    theme: "blogpaper"
+    title: "" # Your site title
+    copyright: "" # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
+    languageCode: en # The language code of your site, by default "en"
+    menu:
+      main: # The menu to display on top-right of your site, see https://gohugo.io/templates/menu-templates/#site-config-menus
+        - name: About
+          url: /about
+        - name: Posts
+          url: /posts
+    params:
+      author: "" # Your name
+      datetimeFormat: "Mon 2 Jan 2006" # See https://gohugo.io/functions/format for examples
+      description: "" # The description of your site (used on a <meta> tag)
+      mainSections: # List the sections (the subfolders) you want to display on the homepage
+      - "posts"
+      - "docs"
     ```
 
 ## Upgrade
