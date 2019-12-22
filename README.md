@@ -22,11 +22,11 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
 4. Configure on your `config.yaml`:
 
     ```yaml
-    theme: "blogpaper"
-    title: "" # Your site title
+    theme: blogpaper
+    title: # Your site title
     author:
       name: # Your name
-    copyright: "" # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
+    copyright: # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
     languageCode: en # The language code of your site, by default "en"
     menu:
       main: # The menu to display on top-right of your site, see https://gohugo.io/templates/menu-templates/#site-config-menus
@@ -35,11 +35,10 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
         - name: Posts
           url: /posts
     params:
-      datetimeFormat: "Mon 2 Jan 2006" # See https://gohugo.io/functions/format for examples
-      description: "" # The description of your site (used on a <meta> tag)
-      mainSections: # List the sections (the subfolders) you want to display on the homepage
-      - "posts"
-      - "docs"
+      datetimeFormat: Mon 2 Jan 2006 # See https://gohugo.io/functions/format for examples
+      description: # The description of your site (used on a <meta> tag)
+      #mainSections: # List the sections (the subfolders) you want to display on the homepage, "posts" by default
+      #- posts
     ```
 
 ## Upgrade
