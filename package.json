@@ -1,8 +1,8 @@
 {
   "name": "blogpaper",
   "version": "0.0.1",
-  "description": "A newspaper like blog theme for Hugo.",
-  "main": "theme.toml",
+  "description": "A graphical newspaper like blog theme for Hugo.",
+  "main": "theme.yaml",
   "repository": "https://github.com/NormandErwan/blogpaper",
   "author": "Erwan Normand <normand.erwan@protonmail.com>",
   "license": "MIT",
