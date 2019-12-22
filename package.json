@@ -6,14 +6,7 @@
   "repository": "https://github.com/NormandErwan/blogpaper",
   "author": "Erwan Normand <normand.erwan@protonmail.com>",
   "license": "MIT",
-  "private": true,
-  "dependencies": {},
-  "workspaces": {
-    "packages": [
-      "assets/*"
-    ],
-    "nohoist": [
-      "**"
-    ]
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }

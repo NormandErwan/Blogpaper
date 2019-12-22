@@ -1,8 +1,0 @@
-{
-  "name": "assets-css",
-  "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "normalize.css": "^8.0.1"
-  }
-}
