@@ -10,7 +10,8 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
 ## Install
 
 1. Make sure you're using the [Hugo extended](https://gohugo.io/getting-started/installing/) version.
-2. Get the theme:
+2. Install the package manager [Yarn](https://yarnpkg.com/en/docs/install).
+3. Get the theme:
 
     ```bash
     git submodule add https://github.com/NormandErwan/blogpaper themes/blogpaper
@@ -18,7 +19,7 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
     yarn install
     ```
 
-3. Configure on your `config.toml`:
+4. Configure on your `config.toml`:
 
     ```toml
     theme = "blogpaper"
