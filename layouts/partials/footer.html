@@ -3,9 +3,7 @@
   {{- with .Site.Copyright -}}
   {{ . }}
   {{- else -}}
-  &copy; {{ now.Year }}
-  {{- with .Site.Params.author }} {{ . }}. {{ end -}}
-  <a href='{{ "" | relURL }}'>{{ .Site.Title }}</a>
+  &copy; {{ now.Year }} {{- with .Site.Author }} {{ .name }}. {{- end }} <a href='{{ "" | relURL }}'>{{ .Site.Title }}</a>
   {{- end -}}
 </footer>
 {{- end }}

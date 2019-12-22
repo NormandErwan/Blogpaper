@@ -24,6 +24,8 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
     ```yaml
     theme: "blogpaper"
     title: "" # Your site title
+    author:
+      name: # Your name
     copyright: "" # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
     languageCode: en # The language code of your site, by default "en"
     menu:
@@ -33,7 +35,6 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
         - name: Posts
           url: /posts
     params:
-      author: "" # Your name
       datetimeFormat: "Mon 2 Jan 2006" # See https://gohugo.io/functions/format for examples
       description: "" # The description of your site (used on a <meta> tag)
       mainSections: # List the sections (the subfolders) you want to display on the homepage
