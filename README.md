@@ -19,9 +19,9 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
     yarn install
     ```
 
-4. Configure on your `config.yaml`:
+4. Configure on your `config.yml`:
 
-    ```yaml
+    ```yml
     theme: blogpaper
     title: # Your site title
     author:
