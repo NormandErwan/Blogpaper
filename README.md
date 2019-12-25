@@ -26,6 +26,7 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
     title: # Your site title
     author:
       name: # Your name
+    baseURL: # Hostname (and path) to the root, e.g. https://bep.is/ (Blogpaper uses relative URLs)
     copyright: # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
     languageCode: en # The language code of your site, by default "en"
     menu:
