@@ -1,13 +1,14 @@
 {{- with .Params.banner -}}
 
-  {{/* Try get banner as page resource */}}
+  {{/* Try to get banner as page resource */}}
   {{- $src := printf "%s" . -}}
   {{- with $.Resources.GetMatch $src -}}
+
     {{- partial "banner-figure" . }}
 
   {{- else -}}
 
-    {{/* Or try get banner as parent page resource */}}
+    {{/* Or try get parent banner as fallback */}}
     {{- with $.Parent -}}
       {{- partial "banner" . -}}
     {{- end -}}
@@ -19,14 +20,15 @@
   {{/* If banner not explicitly deactivated on page (banner: `false` on front matter) */}}
   {{- if not (eq .Params.banner false) -}}
 
-    {{/* Or try get the default banner resource */}}
+    {{/* Try to get the default banner resource */}}
     {{- $src := $.Site.Params.banner | default "banner.*" -}}
     {{- with $.Resources.GetMatch $src -}}
+
       {{- partial "banner-figure" . }}
 
     {{- else -}}
 
-      {{/* Or try get parent banner */}}
+      {{/* Or try get parent banner as fallback */}}
       {{- with .Parent -}}
         {{- partial "banner" . -}}
       {{- end -}}
