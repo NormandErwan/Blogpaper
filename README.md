@@ -10,12 +10,10 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
 ## Install
 
 1. Make sure you're using the [Hugo extended](https://gohugo.io/getting-started/installing/) version.
-2. Install the package manager [Yarn](https://yarnpkg.com/en/docs/install).
 3. Get the theme:
 
     ```bash
     git submodule add https://github.com/NormandErwan/Blogpaper themes/Blogpaper
-    yarn -cwd themes/Blogpaper install
     ```
 
 4. Configure on your `config.yml`:
@@ -57,7 +55,6 @@ Execute:
 
 ```bash
 git submodule update --remote themes/blogpaper
-yarn -cwd themes/Blogpaper install
 ```
 
 ## Troubleshooting / FAQ

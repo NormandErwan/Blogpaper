@@ -18,7 +18,7 @@
   {{- end -}}
   {{- end }}
 
-  {{ $normalize_css := resources.Get "node_modules/normalize.css/normalize.css" | minify -}}
+  {{ $normalize_css := resources.Get "css/normalize.css/normalize.css" | minify -}}
 
   {{- $scss_options := (dict "outputStyle" "compressed") -}}
   {{- $blogpaper_css := resources.Get "css/blogpaper.scss" | resources.ExecuteAsTemplate "blogpaper.scss" . | toCSS $scss_options -}}
