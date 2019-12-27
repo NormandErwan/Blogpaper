@@ -8,16 +8,30 @@
 
   {{- else -}}
 
-    {{/* Or try to get the default banner resource */}}
-    {{- $src = $.Site.Params.banner | default "banner.*" -}}
-    {{- with $.Resources.GetMatch $src -}}
+    {{/* Or try to get the banner resource with the same filename as the page */}}
+    {{- $resource := newScratch -}}
+    {{- if and .File .Parent -}}
+      {{- $src := printf "%s.*" .File.BaseFileName -}}
+      {{- $resource.Set "value" ($.Parent.Resources.GetMatch $src) -}}
+    {{- end -}}
+
+    {{- with $resource.Get "value" -}}
       {{- partial "banner-figure" . }}
 
     {{- else -}}
 
-      {{/* Or try get parent banner as fallback */}}
-      {{- with .Parent -}}
-        {{- partial "banner" . -}}
+      {{/* Or try to get the default banner resource */}}
+      {{- $src := $.Site.Params.banner | default "banner.*" -}}
+      {{- with $.Resources.GetMatch $src -}}
+        {{- partial "banner-figure" . }}
+
+      {{- else -}}
+
+        {{/* Or try get parent banner as fallback */}}
+        {{- with .Parent -}}
+          {{- partial "banner" . -}}
+        {{- end -}}
+
       {{- end -}}
 
     {{- end -}}
