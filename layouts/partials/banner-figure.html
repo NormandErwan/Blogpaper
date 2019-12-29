@@ -1,16 +1,16 @@
 <figure class="banner">
-  <img src="{{ .RelPermalink }}" alt="Header banner" />
+  <img src="{{ .resource.RelPermalink }}" alt="Header banner" />
 
-  {{- if or .Params.caption .Params.href }}
+  {{- if or .caption .href }}
     <figcaption class="metadata">
 
-      {{- with .Params.href -}}
+      {{- with .href -}}
       <a href="{{ . }}">
       {{- end -}}
 
-        {{- with .Params.caption -}} {{ . }} {{- end -}}
+        {{- with .caption -}} {{ . }} {{- end -}}
 
-      {{- with .Params.href -}}
+      {{- with .href -}}
       </a>
       {{- end -}}
 
