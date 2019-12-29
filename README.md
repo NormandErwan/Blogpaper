@@ -32,7 +32,8 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](htt
     hugo server -D
     ```
 
-You should now a have a working blog, but with a flat grey background instead of banner images on top your pages.
+You should now a have a working blog, but with a flat grey background instead of banner images on top your pages. See
+the next section to configure your blog and add banner images on your pages.
 
 |                           After intall homepage                           |                           After intall post page                            |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -109,7 +110,7 @@ See for example the Blogpaper's [example site](https://github.com/NormandErwan/B
     └── banner.jpg
 ```
 
-You can download images on sites like [Lorem Picsum](https://picsum.photos/) or
+You can download free images on sites like [Lorem Picsum](https://picsum.photos/) or
 [other](https://alternativeto.net/software/unsplash/).
 
 ## Troubleshooting / FAQ
