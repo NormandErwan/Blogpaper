@@ -1,5 +1,5 @@
 <figure class="banner">
-  <img src="{{ .resource.RelPermalink }}" alt="Header banner" />
+  <img src="{{ .resource.RelPermalink }}" alt="{{ .alt }}" />
 
   {{- if or .caption .href }}
     <figcaption class="metadata">
