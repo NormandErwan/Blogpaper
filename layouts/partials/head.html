@@ -18,6 +18,10 @@
   {{- end -}}
   {{- end }}
 
+  {{- range .AlternativeOutputFormats }}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title | safeHTML }}">
+  {{- end }}
+
   {{ $normalize_css := resources.Get "css/normalize.css/normalize.css" | minify -}}
 
   {{- $scss_options := (dict "outputStyle" "compressed") -}}
