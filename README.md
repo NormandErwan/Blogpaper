@@ -36,7 +36,7 @@ You should now a have a working blog, but with a flat grey background instead of
 the next section to configure your blog and add banner images on your pages.
 
 |                           After intall homepage                           |                           After intall post page                            |
-|---------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+|:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
 | ![Example of a homepage after install](static/after-install-homepage.jpg) | ![Example of a post page after install](static/after-install-post-page.jpg) |
 
 ## Configure
