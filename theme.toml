@@ -19,3 +19,8 @@ min_version = 0.48
 [author]
 name = "Erwan Normand"
 homepage = "https://normanderwan.fr"
+
+[original]
+name = "Start Bootstrap - Clean Blog"
+homepage = "https://startbootstrap.com/themes/clean-blog/"
+repo = "https://github.com/BlackrockDigital/startbootstrap-clean-blog"
