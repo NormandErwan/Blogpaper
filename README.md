@@ -4,9 +4,9 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
 
-![Example of a homepage](static/homepage.jpg)
+![Example of a homepage](images/screenshot.jpg)
 
-![Example of a post page](static/post-page.jpg)
+![Example of a post page](images/post-page.jpg)
 
 This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
 Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](https://curious-jekyll.netlify.com/).
@@ -37,7 +37,7 @@ the next section to configure your blog and add banner images on your pages.
 
 |                           After intall homepage                           |                           After intall post page                            |
 |:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| ![Example of a homepage after install](static/after-install-homepage.jpg) | ![Example of a post page after install](static/after-install-post-page.jpg) |
+| ![Example of a homepage after install](images/after-install-homepage.jpg) | ![Example of a post page after install](images/after-install-post-page.jpg) |
 
 ## Configure
 
