@@ -4,12 +4,12 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
 
-![Example of a homepage](images/screenshot.png)
+![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)
 
-![Example of a post page](images/post-page.jpg)
+![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.jpg)
 
 This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
-Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekill's [Curious](https://curious-jekyll.netlify.com/).
+Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](https://curious-jekyll.netlify.com/).
 
 ## Install
 
@@ -37,7 +37,7 @@ the next section to configure your blog and add banner images on your pages.
 
 |                           After intall homepage                           |                           After intall post page                            |
 |:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| ![Example of a homepage after install](images/after-install-homepage.jpg) | ![Example of a post page after install](images/after-install-post-page.jpg) |
+| ![Example of a homepage after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/after-install-homepage.jpg) | ![Example of a post page after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/after-install-post-page.jpg) |
 
 ## Configure
 
@@ -48,7 +48,7 @@ the next section to configure your blog and add banner images on your pages.
     title: # Your site title
     author:
       name: # Your name
-    baseURL: # Hostname (and path) to the root, e.g. https://bep.is/ (Blogpaper uses relative URLs)
+    baseURL: # Hostname (and path) to the root, e.g. https://bep.is/
     copyright: # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
     languageCode: en # The language code of your site, by default "en"
     menu:
