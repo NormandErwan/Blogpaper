@@ -119,6 +119,14 @@ You can download free images on sites like [Lorem Picsum](https://picsum.photos/
   - Problem: I have the error: `Problem: Building sites … ERROR Transformation failed: TOCSS: failed to transform "blogpaper.scss" (text/x-scss)`.
   - Solution: [Reinstall Hugo](https://gohugo.io/getting-started/installing/), the *extended* version not the standard one.
 
+## Contributing
+
+For any question or comment, please [open a new issue](https://github.com/NormandErwan/Blogpaper/issues/new).
+I'm not a web designer so I'm open to any design suggestions! :-)
+
+If you'd like to contribute, please [fork the repository](https://github.com/NormandErwan/Blogpaper/fork) and use a
+feature branch. Pull requests are warmly welcome!
+
 ## Upgrade
 
 Execute:
