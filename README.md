@@ -137,6 +137,6 @@ git submodule update --remote themes/Blogpaper
 
 ## License
 
-The MIT License (MIT). Copyright (c) 2019 Erwan Normand <normand.erwan@protonmail.com>.
+The MIT License (MIT). Copyright (c) 2019-2020 Erwan Normand <normand.erwan@protonmail.com>.
 
 See the [LICENSE.md](LICENSE.md) file for details.
