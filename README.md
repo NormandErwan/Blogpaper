@@ -101,7 +101,7 @@ See for example the Blogpaper's [example site](https://github.com/NormandErwan/B
     |   |   ├── banner.jpg
     |   |   └── index.md # Use banner.jpg
     |   ├── _index.md # No banner.jpg, use the parent banner: ../banner.jpg
-    |   └── emoji-support.md # Use emoji-support.jpg
+    |   ├── emoji-support.md # Use emoji-support.jpg
     |   ├── emoji-support.jpg
     |   └── ...
     ├── _index.md # Use banner.jpg
@@ -118,6 +118,18 @@ You can download free images on sites like [Lorem Picsum](https://picsum.photos/
 - I can't generate the site.
   - Problem: I have the error: `Problem: Building sites … ERROR Transformation failed: TOCSS: failed to transform "blogpaper.scss" (text/x-scss)`.
   - Solution: [Reinstall Hugo](https://gohugo.io/getting-started/installing/), the *extended* version not the standard one.
+
+- I want to customize the CSS.
+  - Use your own CSS or SCSS files. Simply add the files in your `/assets/` folder.
+
+    ```bash
+    .
+    └── assets
+        └── css
+            ├── custom1.css
+            ├── custom2.scss
+            └── ...
+    ```
 
 ## Contributing
 
