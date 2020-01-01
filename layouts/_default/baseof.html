@@ -1,7 +1,7 @@
 <!doctype html>
 <html {{ with .Site.Language.Lang -}} lang="{{ . }}" {{- end }}>
 {{ partial "head" . }}
-<body {{- with .Site.Params.theme }} class="theme--{{ . }}" {{- end -}}>
+<body>
   {{ partial "nav" . }}
   <main>
     {{- block "main" . -}}{{- end -}}

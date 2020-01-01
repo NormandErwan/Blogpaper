@@ -62,14 +62,6 @@
   --footer-margin-top: var(--header--main-margin-bottom);
 }
 
-.theme--dark {
-  --color-background: #111;
-  --color-text: #ccc;
-  --color-text-rgb: #{to-rgb(#ccc)};
-  --color-metadata: #999;
-  --color-metadata: #{to-rgb(#999)};
-}
-
 // From https://github.com/jonathantneal/system-font-css
 @font-face {
   font-family: system-font;
