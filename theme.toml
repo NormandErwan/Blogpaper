@@ -14,7 +14,7 @@ features = [
   "minimalist",
   "graphical"
 ]
-min_version = 0.41
+min_version = 0.48
 
 [author]
 name = "Erwan Normand"
