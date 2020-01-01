@@ -1,8 +1,8 @@
 name = "Blogpaper"
 license = "MIT"
-licenselink = "https://github.com/NormandErwan/blogpaper/blob/master/LICENSE"
+licenselink = "https://github.com/NormandErwan/Blogpaper/blob/master/LICENSE"
 description = "A graphical newspaper like blog theme for Hugo."
-homepage = "https://normanderwan.github.io/blogpaper"
+homepage = "https://normanderwan.github.io/Blogpaper"
 tags = [
   "theme",
   "hugo",
