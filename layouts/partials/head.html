@@ -46,6 +46,6 @@
     {{- end -}}
   {{- end -}}
 
-  {{- $css := $css_files | resources.Concat "main.css" | fingerprint -}}
+  {{- $css := $css_files | resources.Concat "main.css" | fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
