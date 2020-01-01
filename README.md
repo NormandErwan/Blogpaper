@@ -4,7 +4,7 @@
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
 
-![Example of a homepage](images/screenshot.jpg)
+![Example of a homepage](images/screenshot.png)
 
 ![Example of a post page](images/post-page.jpg)
 
