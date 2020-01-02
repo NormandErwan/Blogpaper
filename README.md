@@ -3,6 +3,7 @@
 > A graphical newspaper like blog theme for Hugo.
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
+[![GitHub Pages Status](https://github.com/NormandErwan/Blogpaper/workflows/GitHub%20Pages/badge.svg)](https://github.com/NormandErwan/Blogpaper/actions)
 
 ![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)
 
@@ -141,11 +142,23 @@ feature branch. Pull requests are warmly welcome!
 
 ## Upgrade
 
-Execute:
+On your site directory, execute:
 
 ```bash
 git submodule update --remote themes/Blogpaper
 ```
+
+## Example site
+
+Clone this repository, then execute:
+
+```bash
+cd exampleSite
+hugo server --themesDir ../..
+```
+
+Content is adapted from <https://github.com/gohugoio/hugoBasicExample>.
+Images are credited on the page where they are used.
 
 ## License
 
