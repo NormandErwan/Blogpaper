@@ -130,7 +130,7 @@ You can download free images on sites like [Lorem Picsum](https://picsum.photos/
             └── ...
     ```
 
-## Contributing
+## Contribute
 
 For any question or comment, please [open a new issue](https://github.com/NormandErwan/Blogpaper/issues/new).
 I'm not a web designer so I'm open to any design suggestions! :-)
@@ -146,7 +146,7 @@ From your site folder, execute:
 git submodule update --remote themes/Blogpaper
 ```
 
-## Example site
+## Build the example site
 
 Clone this repository, then execute:
 
