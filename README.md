@@ -5,9 +5,11 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
 [![GitHub Pages Status](https://github.com/NormandErwan/Blogpaper/workflows/GitHub%20Pages/badge.svg)](https://github.com/NormandErwan/Blogpaper/actions)
 
-![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)
+[![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)](https://normanderwan.github.io/Blogpaper/)
 
-![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.jpg)
+[![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.jpg)](https://normanderwan.github.io/Blogpaper/posts/markdown-syntax/)
+
+See the live demo: <https://normanderwan.github.io/Blogpaper/>.
 
 This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
 Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](https://curious-jekyll.netlify.com/).
