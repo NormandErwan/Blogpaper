@@ -58,12 +58,10 @@ the next section to configure your blog and add banner images on your pages.
           url: /about
     params:
       description: # The description of your site (used on a <meta> tag)
-      mainSections: # Optional, list the sections (the subfolders) you want to display on the homepage, "posts" by default
-        - posts
     ```
 
     See <https://gohugo.io/getting-started/configuration/> for more configuration settings (such as `datetimeFormat`,
-    `paginate` or `summaryLength`).
+    `mainSections`, `paginate` or `summaryLength`).
 
 2. Add banner images on your pages, you can either:
     - Add a `banner.jpg` image next to a `index.md` or `_index.md` page.
@@ -142,7 +140,7 @@ feature branch. Pull requests are warmly welcome!
 
 ## Upgrade
 
-On your site directory, execute:
+From your site folder, execute:
 
 ```bash
 git submodule update --remote themes/Blogpaper
