@@ -108,11 +108,11 @@ a {
   position: relative;
   margin: 0;
 
-  & img {
+  img {
     width: 100%;
   }
 
-  & figcaption {
+  figcaption {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -145,11 +145,11 @@ a {
   list-style: none;
 
   &__item:not(:first-child),
-  & .page-item:not(:first-child) {
+  .page-item:not(:first-child) {
     margin-left: var(--inline-list__item-margin-left);
   }
 
-  & .disabled a {
+  .disabled a {
     border-bottom: none;
   }
 }
@@ -166,7 +166,7 @@ a {
   color: var(--header--main-color-text);
   @include set-links-color(var(--header--main-color-text-rgb), 0);
 
-  & .container {
+  .container {
     max-width: var(--nav-max-width);
   }
 
@@ -194,7 +194,7 @@ a {
   &__categories {
     flex: 1;
 
-    & .inline-list__item {
+    .inline-list__item {
       margin-left: var(--header__categories_inline-list__item-margin-left);
 
       &::before {
@@ -220,23 +220,23 @@ a {
 
   &__categories {
 
-    & .inline-list__item::before {
+    .inline-list__item::before {
       color: var(--header--main-color-text);
     }
   }
 
-  & .container {
+  .container {
     max-width: var(--header--main-max-width);
   }
 
-  & .banner {
+  .banner {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    & img {
+    img {
       height: 100%;
       object-fit: cover;
     }
@@ -252,11 +252,11 @@ a {
     }
   }
 
-  & > *:not(.banner) {
+  > *:not(.banner) {
     position: relative;
   }
 
-  & .metadata {
+  .metadata {
     color: var(--header--main-color-text);
   }
 }
@@ -266,7 +266,7 @@ a {
 .summary {
   margin-bottom: var(--summary-margin-bottom);
 
-  & .banner {
+  .banner {
     margin-bottom: var(--summary__banner-margin-bottom);
     max-height: var(--summary__banner-max-height);
     overflow: hidden;
@@ -277,26 +277,26 @@ a {
 
 .post .content {
 
-  & figure {
+  figure {
     margin: var(--figure-margin);
     text-align: center;
 
-    & figcaption {
+    figcaption {
       margin: var(--figcaption-margin);
       font-size: var(--figcaption-font-size);
     }
 
-    & figcaption > * {
+    figcaption > * {
       margin: 0;
     }
   }
 
-  & img {
+  img {
     max-width: 100%;
   }
 
   // From https://css-tricks.com/full-width-containers-limited-width-parents/
-  & .full-width {
+  .full-width {
     position: relative;
     left: 50%;
     right: 50%;
@@ -304,7 +304,7 @@ a {
     margin-left: -50vw;
     margin-right: -50vw;
 
-    & img {
+    img {
       width: 100%;
     }
   }
