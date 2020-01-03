@@ -1,5 +1,13 @@
 <figure class="banner">
+  {{- with .page_href -}}
+  <a href="{{ . }}">
+  {{- end -}}
+
   <img src="{{ .resource.RelPermalink }}" alt="{{ .alt }}" />
+
+  {{- with .href -}}
+  </a>
+  {{- end -}}
 
   {{- if or .caption .href }}
     <figcaption class="metadata">

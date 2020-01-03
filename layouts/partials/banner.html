@@ -7,6 +7,12 @@
     {{- $banner = merge $banner .Page.Params.banner -}}
   {{- end -}}
 
+  {{/* Should the banner link to the page? */}}
+  {{ $page_href := .page_href | default false }}
+  {{- if $page_href -}}
+    {{- $banner = merge $banner (dict "page_href" $page_href) -}}
+  {{- end -}}
+
   {{/* Try to get banner as page resource */}}
   {{- with .Page.Resources.GetMatch $banner.src -}}
     {{- $banner = merge $banner (dict "resource" .) -}}
@@ -36,7 +42,7 @@
 
         {{/* Or try to get the parent banner as fallback */}}
         {{- with .Page.Parent -}}
-          {{- partial "banner" (dict "Page" .) -}}
+          {{- partial "banner" (dict "Page" . "page_href" $page_href) -}}
         {{- end -}}
 
       {{- end -}}

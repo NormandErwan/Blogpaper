@@ -1,6 +1,6 @@
 <article class="summary">
   <header class="header">
-    {{- partial "banner" (dict "Page" .) }}
+    {{- partial "banner" (dict "Page" . "page_href" .RelPermalink) }}
 
     <div class="header__metadata inline-list">
       {{ partial "datetime.html" . }}
