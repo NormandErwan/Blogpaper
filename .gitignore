@@ -1,6 +1,5 @@
 # Hugo default output directory
 **/public
-**/resources
 
 # NPM
 **/node_modules
