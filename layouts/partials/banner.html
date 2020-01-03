@@ -2,7 +2,7 @@
 {{- if not (eq .Params.banner false) -}}
 
   {{/* Get 'banner' from front matter, complete with default values */}}
-  {{- $banner := dict "src" "" "caption" "" "href" "" "alt" "Header banner" -}}
+  {{- $banner := dict "src" "" "caption" "" "href" "" "alt" (print "Header banner of '" .Name "'") -}}
   {{- if .Params.banner -}}
     {{- $banner = merge $banner .Params.banner -}}
   {{- end -}}
