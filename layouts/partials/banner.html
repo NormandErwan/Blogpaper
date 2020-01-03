@@ -1,23 +1,23 @@
 {{/* If banner not explicitly deactivated on page ('banner: false' on front matter) */}}
-{{- if not (eq .Params.banner false) -}}
+{{- if not (eq .Page.Params.banner false) -}}
 
   {{/* Get 'banner' from front matter, complete with default values */}}
-  {{- $banner := dict "src" "" "caption" "" "href" "" "alt" (print "Header banner of '" .Name "'") -}}
-  {{- if .Params.banner -}}
-    {{- $banner = merge $banner .Params.banner -}}
+  {{- $banner := dict "src" "" "caption" "" "href" "" "alt" (print "Header banner of '" .Page.Name "'") -}}
+  {{- if .Page.Params.banner -}}
+    {{- $banner = merge $banner .Page.Params.banner -}}
   {{- end -}}
 
   {{/* Try to get banner as page resource */}}
-  {{- with .Resources.GetMatch $banner.src -}}
+  {{- with .Page.Resources.GetMatch $banner.src -}}
     {{- $banner = merge $banner (dict "resource" .) -}}
     {{- partial "banner-figure" $banner }}
 
   {{- else -}}
 
     {{/* Or try to get the banner resource with the same filename as the page */}}
-    {{- if and .File .Parent -}}
-      {{- $src := printf "%s.*" .File.BaseFileName -}}
-      {{- $resource := .Parent.Resources.GetMatch $src -}}
+    {{- if and .Page.File .Page.Parent -}}
+      {{- $src := printf "%s.*" .Page.File.BaseFileName -}}
+      {{- $resource := .Page.Parent.Resources.GetMatch $src -}}
       {{- $banner = merge $banner (dict "src" $src "resource" $resource) }}
     {{- end -}}
 
@@ -27,16 +27,16 @@
     {{- else -}}
 
       {{/* Or try to get the default banner resource */}}
-      {{- $src := .Site.Params.banner | default "banner.*" -}}
-      {{- with .Resources.GetMatch $src -}}
+      {{- $src := .Page.Site.Params.banner | default "banner.*" -}}
+      {{- with .Page.Resources.GetMatch $src -}}
         {{- $banner = merge $banner (dict "src" $src "resource" .) }}
         {{- partial "banner-figure" $banner }}
 
       {{- else -}}
 
         {{/* Or try to get the parent banner as fallback */}}
-        {{- with .Parent -}}
-          {{- partial "banner" . -}}
+        {{- with .Page.Parent -}}
+          {{- partial "banner" (dict "Page" .) -}}
         {{- end -}}
 
       {{- end -}}
