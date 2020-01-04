@@ -22,20 +22,28 @@
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink }}" title="{{ $.Site.Title | safeHTML }}">
   {{- end }}
 
-  {{/* Gets normalize.css and blogpaper.css first */}}
-  {{- $css_files := slice -}}
-  {{- $css_filepaths := slice "css/normalize.css/normalize.css" "css/blogpaper.css" -}}
-  {{- range $css_filepaths -}}
-    {{- $css_files = $css_files | append (resources.Get .) -}}
+  {{/* Get normalize.css first */}}
+  {{- $normalize_css_filepath := "css/normalize.css/normalize.css" -}}
+  {{- $normalize_css := resources.Get $normalize_css_filepath | minify -}}
+  {{- $css_files := slice $normalize_css -}}
+
+  {{/* Parse SCSS files */}}
+  {{- $blogpaper_scss_filepath := "css/blogpaper.scss" -}}
+  {{- $scss_files := slice (resources.Get $blogpaper_scss_filepath) -}}
+  {{- $scss_files := $scss_files | append (where (resources.Match "**.scss") ".Name" "!=" $blogpaper_scss_filepath) -}}
+
+  {{- range $scss_files -}}
+    {{- $css := . | resources.ExecuteAsTemplate .Name . | toCSS (dict "outputStyle" "compressed") -}}
+    {{- $css_files = $css_files | append $css -}}
   {{- end -}}
 
-  {{/* Appends CSS of the user */}}
-  {{- $user_css := where (resources.Match "**.css") ".Name" "not in" $css_filepaths -}}
-  {{- range $user_css -}}
-    {{- $css_files = $css_files | append . -}}
+  {{/* Add custom CSS files */}}
+  {{- range where (resources.Match "**.css") ".Name" "!=" $normalize_css_filepath -}}
+    {{- $css := . | minify -}}
+    {{- $css_files = $css_files | append $css -}}
   {{- end -}}
 
-  {{/* Concat and link all CSS files */}}
-  {{- $css := $css_files | resources.Concat "main.css" | minify | fingerprint "sha512" -}}
+  {{/* Concat and link CSS files */}}
+  {{- $css := $css_files | resources.Concat "main.css" | fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
