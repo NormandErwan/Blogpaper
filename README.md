@@ -16,20 +16,19 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](htt
 
 ## Install
 
-1. Make sure you're using the [Hugo extended](https://gohugo.io/getting-started/installing/) version.
-2. Get the theme:
+1. Get the theme:
 
     ```bash
     git submodule add https://github.com/NormandErwan/Blogpaper themes/Blogpaper
     ```
 
-3. Edit your `config.yml`:
+2. Edit your `config.yml`:
 
     ```yml
     theme: Blogpaper
     ```
 
-4. Generate your site!
+3. Generate your site!
 
     ```bash
     hugo server -D
@@ -114,21 +113,14 @@ See for example the Blogpaper's [example site](https://github.com/NormandErwan/B
 You can download free images on sites like [Lorem Picsum](https://picsum.photos/) or
 [other](https://alternativeto.net/software/unsplash/).
 
-## Troubleshooting / FAQ
-
-- I can't generate the site.
-  - Problem: I have the error: `Problem: Building sites … ERROR Transformation failed: TOCSS: failed to transform "blogpaper.scss" (text/x-scss)`.
-  - Solution: [Reinstall Hugo](https://gohugo.io/getting-started/installing/), the *extended* version not the standard one.
-
-- I want to customize the CSS.
-  - Use your own CSS or SCSS files. Simply add the files in your `/assets/` folder.
+4. If you want to customize the CSS, simply add your CSS files in your `/assets/` folder.
 
     ```bash
     .
     └── assets
         └── css
             ├── custom1.css
-            ├── custom2.scss
+            ├── custom2.css
             └── ...
     ```
 
