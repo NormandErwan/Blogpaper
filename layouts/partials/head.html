@@ -23,22 +23,22 @@
   {{- end }}
 
   {{/* Get normalize.css first */}}
-  {{- $normalize_css := resources.Get "css/normalize.css/normalize.css" | minify -}}
+  {{- $normalize_css_filepath := "css/normalize.css/normalize.css" -}}
+  {{- $normalize_css := resources.Get $normalize_css_filepath | minify -}}
   {{- $css_files := slice $normalize_css -}}
 
   {{/* Parse SCSS files */}}
-  {{ $scss_files := slice (resources.Get "css/blogpaper.scss") }}
-  {{ $scss_files := $scss_files | append (where (resources.Match "**.scss") ".Name" "!=" "css/blogpaper.scss") }}
-
-  {{- $scss_options := (dict "outputStyle" "compressed") -}}
+  {{- $blogpaper_scss_filepath := "css/blogpaper.scss" -}}
+  {{- $scss_files := slice (resources.Get $blogpaper_scss_filepath) -}}
+  {{- $scss_files := $scss_files | append (where (resources.Match "**.scss") ".Name" "!=" $blogpaper_scss_filepath) -}}
 
   {{- range $scss_files -}}
-    {{- $css := . | resources.ExecuteAsTemplate .Name . | toCSS $scss_options -}}
+    {{- $css := . | resources.ExecuteAsTemplate .Name . | toCSS (dict "outputStyle" "compressed") -}}
     {{- $css_files = $css_files | append $css -}}
   {{- end -}}
 
   {{/* Add custom CSS files */}}
-  {{- range where (resources.Match "**.css") ".Name" "!=" "normalize.css" -}}
+  {{- range where (resources.Match "**.css") ".Name" "!=" $normalize_css_filepath -}}
     {{- $css := . | minify -}}
     {{- $css_files = $css_files | append $css -}}
   {{- end -}}
