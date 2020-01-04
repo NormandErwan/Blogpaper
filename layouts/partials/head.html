@@ -24,8 +24,7 @@
 
   {{/* Get normalize.css first */}}
   {{- $normalize_css_filepath := "css/normalize.css/normalize.css" -}}
-  {{- $normalize_css := resources.Get $normalize_css_filepath | minify -}}
-  {{- $css_files := slice $normalize_css -}}
+  {{- $css_files := slice (resources.Get $normalize_css_filepath) -}}
 
   {{/* Parse SCSS files */}}
   {{- $blogpaper_scss_filepath := "css/blogpaper.scss" -}}
@@ -38,12 +37,10 @@
   {{- end -}}
 
   {{/* Add custom CSS files */}}
-  {{- range where (resources.Match "**.css") ".Name" "!=" $normalize_css_filepath -}}
-    {{- $css := . | minify -}}
-    {{- $css_files = $css_files | append $css -}}
-  {{- end -}}
+  {{- $custom_css := where (resources.Match "**.css") ".Name" "!=" $normalize_css_filepath -}}
+  {{- $css_files = $css_files | append $custom_css -}}
 
   {{/* Concat and link CSS files */}}
-  {{- $css := $css_files | resources.Concat "main.css" | fingerprint "sha512" -}}
+  {{- $css := $css_files | resources.Concat "main.css" | minify | fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
