@@ -58,6 +58,9 @@
   --figcaption-margin: var(--header__title-margin);
   --figcaption-font-size: calc(0.9 * var(--font-size));
 
+  --pre-font-size: calc(0.85 * var(--font-size));
+  --pre-padding: var(--container-padding);
+
   --footer-font-size: calc(0.8 * var(--font-size));
   --footer-margin-top: var(--header--main-margin-bottom);
 }
@@ -307,6 +310,12 @@ a {
     img {
       width: 100%;
     }
+  }
+
+  pre {
+    padding: var(--pre-padding);
+    overflow-x: auto;
+    font-size: var(--pre-font-size);
   }
 }
 
