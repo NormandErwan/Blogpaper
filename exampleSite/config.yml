@@ -1,6 +1,6 @@
 author:
   name: Erwan Normand
-baseURL: https://normanderwan.github.io/Blogpaper/
+baseURL: https://example.com
 languageCode: en
 menu:
   main:

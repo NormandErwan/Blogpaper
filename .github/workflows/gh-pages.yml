@@ -20,7 +20,7 @@ jobs:
 
     - name: Build
       working-directory: ./exampleSite
-      run: hugo --minify --themesDir ../..
+      run: hugo --minify --themesDir ../.. --baseURL https://normanderwan.github.io/Blogpaper/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v2
