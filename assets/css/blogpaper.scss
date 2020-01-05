@@ -206,10 +206,6 @@ a {
       }
     }
   }
-
-  &__summary p {
-    margin: 0;
-  }
 }
 
 .header--main {
@@ -273,6 +269,10 @@ a {
     margin-bottom: var(--summary__banner-margin-bottom);
     max-height: var(--summary__banner-max-height);
     overflow: hidden;
+  }
+
+  &__content p {
+    margin: 0;
   }
 }
 
