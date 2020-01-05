@@ -314,8 +314,8 @@ a {
 
   pre {
     padding: var(--pre-padding);
-    overflow-x: auto;
     font-size: var(--pre-font-size);
+    white-space: pre-wrap;
   }
 }
 
