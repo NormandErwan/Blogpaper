@@ -26,12 +26,13 @@ general use or for a specific publication, organization, or field.
 
 ## Images
 
-This theme supports regular image with or without caption, wide images with or without caption and full-width images
-with or without the caption. The examples provided below.
+This theme supports regular image, wide images and full-width images, all with or without the caption.
 
-{{< figure src="1061-750x422.jpg" caption="A regular image with caption (by [Rob Bye](https://unsplash.com/photos/Kc7xqFTtcc4))" >}}
+{{< figure src="1061-750x422.jpg" caption="A regular image with caption. [Rob Bye](https://unsplash.com/photos/Kc7xqFTtcc4)." >}}
 
-{{< figure src="banner.jpg" caption="A full-width image with caption (by [Alexey Topolyanskiy](https://unsplash.com/photos/-oWyJoSqBRM))" class="full-width" >}}
+{{< figure src="116-1050x600.jpg" caption="A wide image with caption. [Anton Sulsky](https://unsplash.com/photos/YcfCXxo7rpc)." class="wide-width" >}}
+
+{{< figure src="banner.jpg" caption="A full-width image with caption. [Alexey Topolyanskiy](https://unsplash.com/photos/-oWyJoSqBRM)." class="full-width" >}}
 
 ## This is an H2
 

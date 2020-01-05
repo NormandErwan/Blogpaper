@@ -59,6 +59,8 @@
   --figcaption-margin: var(--header__title-margin);
   --figcaption-font-size: calc(0.9 * var(--font-size));
 
+  --wide-width-max-width: calc(1.4 * var(--content-max-width));
+
   --pre-font-size: calc(0.85 * var(--font-size));
   --pre-padding: var(--container-padding);
 
@@ -301,6 +303,12 @@ a {
 
   img {
     max-width: 100%;
+  }
+
+  .wide-width {
+    max-width: var(--wide-width-max-width);
+    margin-left: calc((var(--content-max-width) - var(--wide-width-max-width)) / 2);
+    margin-right: calc((var(--content-max-width) - var(--wide-width-max-width)) / 2);
   }
 
   // From https://css-tricks.com/full-width-containers-limited-width-parents/
