@@ -17,26 +17,28 @@ Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](htt
 ## Install
 
 1. Make sure you're using the [Hugo extended](https://gohugo.io/getting-started/installing/) version.
-2. Get the theme:
+2. If you're using Hugo for the first time, follow the
+[Hugo's quick start tutorial](https://gohugo.io/getting-started/quick-start/) first.
+3. Copy the theme in your site:
 
     ```bash
     git submodule add https://github.com/NormandErwan/Blogpaper themes/Blogpaper
     ```
 
-3. Edit your `config.yml`:
+4. Edit your `config.yml`:
 
     ```yml
     theme: Blogpaper
     ```
 
-4. Generate your site!
+5. Generate your site!
 
     ```bash
     hugo server -D
     ```
 
-You should now a have a working blog, but with a flat grey background instead of banner images on top your pages. See
-the next section to configure your blog and add banner images on your pages.
+You should now a have a working site, but with a flat grey background instead of banner images on top your pages. See
+the next section to configure your site and add banner images on your pages.
 
 |                           After intall homepage                           |                           After intall post page                            |
 |:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
