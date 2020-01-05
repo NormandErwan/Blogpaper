@@ -28,7 +28,7 @@ general use or for a specific publication, organization, or field.
 
 This theme supports regular image, wide images and full-width images, all with or without the caption.
 
-{{< figure src="1061-750x422.jpg" caption="A regular image with caption. [Rob Bye](https://unsplash.com/photos/Kc7xqFTtcc4)." >}}
+{{< figure src="1016-730x487.jpg" caption="A regular image with caption. [Philippe Wuyts](https://unsplash.com/photos/_h7aBovKia4)." >}}
 
 {{< figure src="116-1050x600.jpg" caption="A wide image with caption. [Anton Sulsky](https://unsplash.com/photos/YcfCXxo7rpc)." class="wide-width" >}}
 
