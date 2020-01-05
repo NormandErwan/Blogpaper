@@ -82,6 +82,25 @@ the next section to configure your blog and add banner images on your pages.
         banner: false
         ```
 
+    - For example, see the Blogpaper's [example site](https://github.com/NormandErwan/BlogpaperExampleSite):
+
+        ```bash
+        .
+        └── content
+            ├── posts
+            |   ├── rich-content
+            |   |   ├── banner.jpg
+            |   |   └── index.md # Use banner.jpg
+            |   ├── _index.md # No banner.jpg, use the parent banner: ../banner.jpg
+            |   ├── emoji-support.md # Use emoji-support.jpg
+            |   ├── emoji-support.jpg
+            |   └── ...
+            ├── _index.md # Use banner.jpg
+            ├── about.md # Use about.jpg
+            ├── about.jpg
+            └── banner.jpg
+        ```
+
 3. You can add a caption and link on a banner, add to the
 [front matter](https://gohugo.io/content-management/front-matter/) of the page:
 
@@ -91,25 +110,6 @@ the next section to configure your blog and add banner images on your pages.
       caption: # Optional, the caption of the banner
       href: # Optional, a link on the caption
     ```
-
-See for example the Blogpaper's [example site](https://github.com/NormandErwan/BlogpaperExampleSite):
-
-```bash
-.
-└── content
-    ├── posts
-    |   ├── rich-content
-    |   |   ├── banner.jpg
-    |   |   └── index.md # Use banner.jpg
-    |   ├── _index.md # No banner.jpg, use the parent banner: ../banner.jpg
-    |   ├── emoji-support.md # Use emoji-support.jpg
-    |   ├── emoji-support.jpg
-    |   └── ...
-    ├── _index.md # Use banner.jpg
-    ├── about.md # Use about.jpg
-    ├── about.jpg
-    └── banner.jpg
-```
 
 You can download free images on sites like [Lorem Picsum](https://picsum.photos/) or
 [other](https://alternativeto.net/software/unsplash/).
