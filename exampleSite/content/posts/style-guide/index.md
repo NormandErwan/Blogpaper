@@ -24,6 +24,9 @@ The Style Guide provides you with a set of standards for the writing and design 
 general use or for a specific publication, organization, or field.
 <!--more-->
 
+See these Markdown quick reference for more details on the Markdown syntax: <https://www.markdownguide.org/cheat-sheet>
+or <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>.
+
 ## Images
 
 This theme supports regular image, wide images and full-width images, all with or without the caption.
@@ -132,9 +135,22 @@ content to the very end of your post.
 
 ## Tables
 
-|       Inline      |     Markdown     |             In            |      Table     |
-|:-----------------:|:----------------:|:-------------------------:|:--------------:|
-| *italics content* | **bold content** | ~~strikethrough content~~ | `code content` |
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+Tables are aligned to left by default and take the full width of the page.
+Any [column can be aligned](https://www.markdownguide.org/extended-syntax/#alignment) left, center or right.
+They can contain any markdown content.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+Table examples are from here: <https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables>.
 
 ## Videos
 
