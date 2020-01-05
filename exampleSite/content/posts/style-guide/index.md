@@ -1,6 +1,7 @@
 ---
 author: Erwan Normand
 title: Style Guide
+subtitle: Demonstration of this theme on an example post page
 date: 2020-01-04
 tags:
   - markdown
