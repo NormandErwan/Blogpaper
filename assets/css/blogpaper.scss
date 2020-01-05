@@ -33,7 +33,7 @@
   --nav-height: 8rem;
 
   --header__title-line-height: calc(0.8 * var(--font-line-height));
-  --header__title-margin: 0 0 0.5rem 0;
+  --header__title-margin: 0;
   --header__metadata-font-size: calc(0.9 * var(--font-size));
   --header__categories_inline-list__item-margin-left: 1rem;
   --header__banner__figcaption_padding: 0.5rem 1rem;
@@ -53,6 +53,7 @@
   --summary-margin-bottom: calc(3 * var(--header--main-margin-bottom));
   --summary__banner-max-height: 30rem;
   --summary__banner-margin-bottom: var(--container-padding);
+  --summary__content-margin-top: var(--container-padding);
 
   --figure-margin: 0 0 2rem 0;
   --figcaption-margin: var(--header__title-margin);
@@ -271,8 +272,12 @@ a {
     overflow: hidden;
   }
 
-  &__content p {
-    margin: 0;
+  &__content {
+    margin-top: var(--summary__content-margin-top);
+
+    p {
+      margin: 0;
+    }
   }
 }
 
