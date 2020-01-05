@@ -21,6 +21,7 @@ banner:
 
 The Style Guide provides you with a set of standards for the writing and design of theme posts and pages, either for
 general use or for a specific publication, organization, or field.
+<!--more-->
 
 ## Images
 
