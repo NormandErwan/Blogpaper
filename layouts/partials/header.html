@@ -12,8 +12,16 @@
 
     <h1 class="header__title">{{ .Title }}</h1>
 
-    {{- with .Summary }}
-    <div class="header__summary metadata">{{ . }}</div>
+    {{- $subtitle := .Params.subtitle | default "" -}}
+    {{- $subtitle_deactivated := and (isset .Params "subtitle") (eq (len $subtitle) 0) -}}
+    {{- if not $subtitle_deactivated -}}
+      {{- $default_subtitle_len := .Site.Params.subtitleLength | default 25 -}}
+      {{- $default_subtitle := delimit (.PlainWords | first $default_subtitle_len) " " -}}
+      {{- $subtitle = $subtitle | default $default_subtitle -}}
+
+      {{- with $subtitle }}
+        <div class="header__subtitle metadata">{{ . | $.RenderString }}</div>
+      {{- end }}
     {{- end }}
   </div>
 </header>
