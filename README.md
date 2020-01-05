@@ -63,7 +63,8 @@ the next section to configure your blog and add banner images on your pages.
     ```
 
     See <https://gohugo.io/getting-started/configuration/> for more configuration settings (such as `datetimeFormat`,
-    `mainSections`, `paginate` or `summaryLength`).
+    `mainSections` or `paginate`).
+    See also how to configure [post summaries](https://gohugo.io/content-management/summaries/) on the homepage.
 
 2. Add banner images on your pages, you can either:
     - Add a `banner.jpg` image next to a `index.md` or `_index.md` page.
@@ -101,12 +102,12 @@ the next section to configure your blog and add banner images on your pages.
             └── banner.jpg
         ```
 
-3. You can add a caption and link on a banner, add to the
-[front matter](https://gohugo.io/content-management/front-matter/) of the page:
+3. Edit the You can add a caption and link on a banner, add to the
+[front matter](https://gohugo.io/content-management/front-matter/) of your pages:
 
     ```yml
     banner:
-      src: <banner-filename>.jpg # Optional, the filename of the banner, by default <page-filename>.md or banner.jpg
+      src: <banner-filename>.jpg # Optional, the filename of the banner, by default <page-filename>.jpg or banner.jpg
       caption: # Optional, the caption of the banner
       href: # Optional, a link on the caption
     ```
