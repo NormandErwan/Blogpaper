@@ -343,6 +343,11 @@ a {
       border-bottom: var(--table__tr-border-bottom);
     }
   }
+
+  // Footnotes
+  ol p {
+    margin: 0;
+  }
 }
 
 /* Footer */
