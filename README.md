@@ -7,9 +7,9 @@
 
 [![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)](https://normanderwan.github.io/Blogpaper/)
 
-[![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.jpg)](https://normanderwan.github.io/Blogpaper/posts/markdown-syntax/)
+[![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.gif)](https://normanderwan.github.io/Blogpaper/posts/style-guide/)
 
-See the live demo: <https://normanderwan.github.io/Blogpaper/>.
+See the [live demo](https://normanderwan.github.io/Blogpaper/) and the [style guide](https://normanderwan.github.io/Blogpaper/posts/style-guide/).
 
 This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
 Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](https://curious-jekyll.netlify.com/).
