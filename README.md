@@ -5,14 +5,11 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
 [![GitHub Pages Status](https://github.com/NormandErwan/Blogpaper/workflows/GitHub%20Pages/badge.svg)](https://github.com/NormandErwan/Blogpaper/actions)
 
+See the [live demo](https://normanderwan.github.io/Blogpaper/):
 [![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)](https://normanderwan.github.io/Blogpaper/)
 
+See the [style guide](https://normanderwan.github.io/Blogpaper/posts/style-guide/):
 [![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.gif)](https://normanderwan.github.io/Blogpaper/posts/style-guide/)
-
-See the [live demo](https://normanderwan.github.io/Blogpaper/) and the [style guide](https://normanderwan.github.io/Blogpaper/posts/style-guide/).
-
-This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
-Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](https://curious-jekyll.netlify.com/).
 
 ## Install
 
@@ -178,3 +175,6 @@ Blogpaper uses the following third-party resources:
 
 - [normalize.css](https://github.com/necolas/normalize.css): The MIT License (MIT).
 [Copyright © Nicolas Gallagher and Jonathan Neal.](https://github.com/necolas/normalize.css/blob/master/LICENSE.md).
+
+This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
+Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](https://curious-jekyll.netlify.com/).
