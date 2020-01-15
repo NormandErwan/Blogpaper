@@ -20,7 +20,7 @@
       {{- $subtitle = $subtitle | default $default_subtitle -}}
 
       {{- with $subtitle }}
-        <div class="header__subtitle metadata">{{ . | $.RenderString }}</div>
+        <div class="header__subtitle metadata">{{ . | markdownify }}</div>
       {{- end }}
     {{- end }}
   </div>
