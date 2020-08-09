@@ -1,4 +1,4 @@
-{{- with (index .Page.Params .term)}}
+{{- with (index .Page.Params .term) }}
   <ul class="metadata inline-list">
     {{- range . }}
     {{- with $.Page.Site.GetPage (printf "/%s/%s" $.term (urlize .)) }}
