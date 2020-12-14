@@ -37,8 +37,8 @@ See the [style guide](https://normanderwan.github.io/Blogpaper/posts/style-guide
 You should now a have a working site, but with a flat grey background instead of banner images on top your pages. See
 the next section to configure your site and add banner images on your pages.
 
-|                           After intall homepage                           |                           After intall post page                            |
-|:-------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+|                           After install homepage                           |                           After install post page                            |
+|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
 | ![Example of a homepage after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/after-install-homepage.jpg) | ![Example of a post page after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/after-install-post-page.jpg) |
 
 ## Configure
