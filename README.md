@@ -6,10 +6,10 @@
 [![GitHub Pages Status](https://github.com/NormandErwan/Blogpaper/workflows/GitHub%20Pages/badge.svg)](https://github.com/NormandErwan/Blogpaper/actions)
 
 See the [live demo](https://normanderwan.github.io/Blogpaper/):
-[![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/screenshot.png)](https://normanderwan.github.io/Blogpaper/)
+[![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/main/images/screenshot.png)](https://normanderwan.github.io/Blogpaper/)
 
 See the [style guide](https://normanderwan.github.io/Blogpaper/posts/style-guide/):
-[![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/post-page.gif)](https://normanderwan.github.io/Blogpaper/posts/style-guide/)
+[![Example of a post page](https://raw.githubusercontent.com/NormandErwan/Blogpaper/main/images/post-page.gif)](https://normanderwan.github.io/Blogpaper/posts/style-guide/)
 
 ## Install
 
@@ -39,7 +39,7 @@ the next section to configure your site and add banner images on your pages.
 
 |                           After install homepage                           |                           After install post page                            |
 |:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|
-| ![Example of a homepage after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/after-install-homepage.jpg) | ![Example of a post page after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/master/images/after-install-post-page.jpg) |
+| ![Example of a homepage after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/main/images/after-install-homepage.jpg) | ![Example of a post page after install](https://raw.githubusercontent.com/NormandErwan/Blogpaper/main/images/after-install-post-page.jpg) |
 
 ## Configure
 
@@ -174,7 +174,7 @@ See the [LICENSE.md](LICENSE.md) file for details.
 Blogpaper uses the following third-party resources:
 
 - [normalize.css](https://github.com/necolas/normalize.css): The MIT License (MIT).
-[Copyright © Nicolas Gallagher and Jonathan Neal.](https://github.com/necolas/normalize.css/blob/master/LICENSE.md).
+[Copyright © Nicolas Gallagher and Jonathan Neal.](https://github.com/necolas/normalize.css/blob/main/LICENSE.md).
 
 This theme is inspired by [Start Bootstrap - Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog),
 Jekyll's [Olania](https://olania-jekyll.netlify.com/) and Jekyll's [Curious](https://curious-jekyll.netlify.com/).
