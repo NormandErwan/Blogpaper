@@ -308,24 +308,22 @@ a {
     max-width: 100%;
   }
 
-  .wide-width {
-    max-width: var(--wide-width-max-width);
-    margin-left: calc((var(--content-max-width) - var(--wide-width-max-width)) / 2);
-    margin-right: calc((var(--content-max-width) - var(--wide-width-max-width)) / 2);
-  }
-
   // From https://css-tricks.com/full-width-containers-limited-width-parents/
-  .full-width {
+  .full-width, .wide-width {
     position: relative;
     left: 50%;
     right: 50%;
     width: 100vw;
     margin-left: -50vw;
     margin-right: -50vw;
+  }
 
-    img {
+  .wide-width img {
+    width: var(--wide-width-max-width);
+  }
+
+  .full-width img {
       width: 100%;
-    }
   }
 
   pre {
