@@ -185,8 +185,6 @@ Images are credited on the page where they are used.
 
 ## License
 
-The MIT License (MIT). Copyright (c) 2019-2020 Erwan Normand <normand.erwan@protonmail.com>.
-
 See the [LICENSE.md](LICENSE.md) file for details.
 
 Blogpaper uses the following third-party resources:
