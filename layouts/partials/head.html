@@ -32,7 +32,7 @@
   {{- $scss_files := $scss_files | append (where (resources.Match "**.scss") ".Name" "!=" $blogpaper_scss_filepath) -}}
 
   {{- range $scss_files -}}
-    {{- $css := . | resources.ExecuteAsTemplate .Name . | toCSS (dict "outputStyle" "compressed") -}}
+    {{- $css := . | resources.ExecuteAsTemplate .Name . | css.Sass (dict "outputStyle" "compressed" "transpiler" "dartsass") -}}
     {{- $css_files = $css_files | append $css -}}
   {{- end -}}
 
