@@ -154,7 +154,7 @@ Table examples are from here: <https://github.com/adam-p/markdown-here/wiki/Mark
 
 ## Videos
 
-{{< vimeo_simple 137643135 >}}
+{{< vimeo 137643135 >}}
 
 [This Mountain](https://vimeo.com/137643135) from [Evan Mann / OWP Denver](https://vimeo.com/evanmann) on
 [Vimeo](https://vimeo.com).
