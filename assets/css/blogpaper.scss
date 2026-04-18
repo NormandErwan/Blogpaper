@@ -17,17 +17,23 @@
   --color-background: #fff;
   --color-text: #333;
   --color-text-rgb: #{to-rgb(#333)};
-  --color-metadata: #666;
-  --color-metadata-rgb: #{to-rgb(#666)};
+  --color-metadata: #595959;
+  --color-metadata-rgb: #{to-rgb(#595959)};
   --color-link-underline-opacity: 0.5;
 
   --font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", Times, serif;
   --font-family-metadata: system-font;
   --font-size: 2rem;
-  --font-line-height: 2;
+  --font-line-height: 1.75;
 
   --inline-list__item-margin-left: 2rem;
   --container-padding: 1rem;
+
+  --transition-duration: 200ms;
+  --transition-easing: ease;
+  --border-radius: 0.25rem;
+  --focus-outline-width: 2px;
+  --focus-outline-offset: 3px;
 
   --nav-max-width: 100rem;
   --nav-height: 8rem;
@@ -76,6 +82,7 @@
   font-family: system-font;
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
 }
 
@@ -101,6 +108,34 @@ body {
   color: var(--color-text);
 }
 
+/* Skip to content */
+
+.skip-to-content {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus-visible {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    padding: 0.5rem 1rem;
+    background: var(--color-background);
+    color: var(--color-text);
+    border: var(--focus-outline-width) solid var(--color-text);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family-metadata);
+    font-size: calc(0.8 * var(--font-size));
+    text-decoration: none;
+    z-index: 9999;
+  }
+}
+
 /* General items */
 
 a {
@@ -111,6 +146,12 @@ a {
   &:hover {
     border-bottom-color: var(--color-text);
   }
+}
+
+:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-text);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: var(--border-radius);
 }
 
 .banner {
@@ -353,4 +394,55 @@ a {
 .footer--main {
   font-size: var(--footer-font-size);
   margin-top: var(--footer-margin-top);
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-text: #e8e8e8;
+    --color-text-rgb: #{to-rgb(#e8e8e8)};
+    --color-metadata: #a8a8a8;
+    --color-metadata-rgb: #{to-rgb(#a8a8a8)};
+    --header--main-color-background: #111;
+    --table__tr-border-bottom: 1px solid #444;
+  }
+}
+
+/* Print */
+
+@media print {
+  .nav,
+  .footer--main {
+    display: none;
+  }
+
+  .header--main {
+    background: none;
+    color: inherit;
+    padding-top: 0;
+  }
+
+  .header--main .banner {
+    display: none;
+  }
+
+  a {
+    color: inherit;
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

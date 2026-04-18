@@ -3,7 +3,7 @@
   <a href="{{ . }}">
   {{- end -}}
 
-  <img src="{{ .resource.RelPermalink }}" alt="{{ .alt }}" />
+  <img src="{{ .resource.RelPermalink }}" alt="{{ .alt }}" loading="lazy" decoding="async" />
 
   {{- with .page_href -}}
   </a>
@@ -13,7 +13,7 @@
     <figcaption class="metadata">
 
       {{- with .href -}}
-      <a href="{{ . }}">
+      <a href="{{ . }}" rel="noopener noreferrer">
       {{- end -}}
 
         {{- with .caption -}} {{ . }} {{- end -}}

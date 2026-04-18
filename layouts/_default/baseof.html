@@ -2,8 +2,9 @@
 <html {{ with .Site.Language.Lang -}} lang="{{ . }}" {{- end }}>
 {{ partial "head" . }}
 <body>
+  <a class="skip-to-content" href="#main">Skip to content</a>
   {{ partial "nav" . }}
-  <main>
+  <main id="main" tabindex="-1">
     {{- block "main" . -}}{{- end -}}
   </main>
   {{ partial "footer" . }}
