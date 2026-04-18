@@ -22,7 +22,7 @@ See the [style guide](https://normanderwan.github.io/Blogpaper/posts/style-guide
     git submodule add https://github.com/NormandErwan/Blogpaper themes/Blogpaper
     ```
 
-4. Edit your `config.yml`:
+4. Edit your `hugo.yaml`:
 
     ```yml
     theme: Blogpaper
@@ -43,27 +43,27 @@ the next section to configure your site and add banner images on your pages.
 
 ## Configure
 
-1. Edit your `config.yml`:
+1. Edit your `hugo.yaml`:
 
     ```yml
     theme: Blogpaper
     title: # Your site title
-    author:
-      name: # Your name
     baseURL: # Hostname (and path) to the root, e.g. https://bep.is/
     copyright: # Optional, will be displayed on site's footer, if this line is removed an default copyright will be generated
     languageCode: en # The language code of your site, by default "en"
-    menu:
+    menus:
       main: # Optional, the menu to display on top-right of your site, see https://gohugo.io/templates/menu-templates/#site-config-menus
         - name: About
           url: /about
     params:
       description: # The description of your site (used on a <meta> tag)
       subtitleLength: 25 # The number of words on the subtitle of a page
+      author:
+        name: # Your name
     ```
 
     See <https://gohugo.io/getting-started/configuration/> for more configuration settings (such as `datetimeFormat`,
-    `mainSections` or `paginate`).
+    `mainSections` or `pagination.pagerSize`).
     See also how to configure [post summaries](https://gohugo.io/content-management/summaries/) on the homepage.
 
     Every page can have a subtitle, displayed bellow the title on the header of the page.
@@ -122,8 +122,8 @@ the next section to configure your site and add banner images on your pages.
 ## Troubleshooting / FAQ
 
 - I can't generate the site.
-  - Problem: I have the error: `Problem: Building sites … ERROR Transformation failed: TOCSS: failed to transform "blogpaper.scss" (text/x-scss)`.
-  - Solution: [Reinstall Hugo](https://gohugo.io/getting-started/installing/), the *extended* version not the standard one.
+  - Problem: I have the error: `Error: error building site: SASS: failed to transform "blogpaper.scss"`.
+  - Solution: Install [Dart Sass](https://sass-lang.com/install/) and make sure it's on your `PATH`. This theme requires Dart Sass, not the deprecated LibSass. Also ensure you're using the [Hugo extended](https://gohugo.io/getting-started/installing/) version.
 
 - I want to customize the CSS.
   - Use your own CSS or SCSS files. Simply add the files in your `/assets/` folder.
