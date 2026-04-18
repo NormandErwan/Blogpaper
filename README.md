@@ -2,9 +2,6 @@
 
 > A graphical newspaper like blog theme for Hugo.
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NormandErwan_blogpaper&metric=alert_status)](https://sonarcloud.io/dashboard?id=NormandErwan_blogpaper)
-[![GitHub Pages Status](https://github.com/NormandErwan/Blogpaper/workflows/GitHub%20Pages/badge.svg)](https://github.com/NormandErwan/Blogpaper/actions)
-
 See the [live demo](https://normanderwan.github.io/Blogpaper/):
 [![Example of a homepage](https://raw.githubusercontent.com/NormandErwan/Blogpaper/main/images/screenshot.png)](https://normanderwan.github.io/Blogpaper/)
 
