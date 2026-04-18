@@ -1,6 +1,10 @@
 # Hugo default output directory
 **/public
 
+# Hugo build artifacts
+**/.hugo_build.lock
+**/resources/_gen/
+
 # Hugo binaries for local testing
 bin
 
