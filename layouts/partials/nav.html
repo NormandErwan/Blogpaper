@@ -1,7 +1,7 @@
-<nav class="nav">
+<nav class="nav" aria-label="Site navigation">
   <div class="nav__content container metadata">
     <div class="nav__home">
-      <a href="{{ .Site.Home.RelPermalink }}" >
+      <a href="{{ .Site.Home.RelPermalink }}">
         {{- with .Site.Params.navHome -}}
           {{- . -}}
         {{- else -}}
@@ -11,11 +11,12 @@
     </div>
 
     {{- with .Site.Menus.main }}
-    <ul class="inline-list">
+    <ul class="inline-list" role="list">
+      {{- $currentPage := $ }}
       {{- range . }}
         <li class="inline-list__item">
           {{- .Pre -}}
-          <a href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+          <a href="{{ .URL }}" title="{{ .Title }}"{{- if $currentPage.IsMenuCurrent "main" . }} aria-current="page"{{- end -}}>{{ .Name }}</a>
           {{- .Post -}}
         </li>
       {{- end }}

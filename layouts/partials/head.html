@@ -1,7 +1,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="x-ua-Compatible" content="ie=edge">
 
   <title>
   {{- block "title" . -}}
@@ -10,12 +9,48 @@
   {{- end -}}
   </title>
 
-  {{- with .Description }}
+  {{- $description := .Description | default .Site.Params.description -}}
+  {{- with $description }}
   <meta name="description" content="{{ . }}">
-  {{- else -}}
-  {{- with .Site.Params.description }}
-  <meta name="description" content="{{ . }}">
-  {{- end -}}
+  {{- end }}
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{/* Open Graph */}}
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{- if .IsPage }}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ .PublishDate.Format `2006-01-02T15:04:05Z07:00` }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format `2006-01-02T15:04:05Z07:00` }}">
+  {{- else }}
+  <meta property="og:type" content="website">
+  {{- end }}
+  {{- with $description }}
+  <meta property="og:description" content="{{ . }}">
+  {{- end }}
+
+  {{/* Twitter / X Card */}}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+  {{- with $description }}
+  <meta name="twitter:description" content="{{ . }}">
+  {{- end }}
+  {{- with .Site.Params.twitterHandle }}
+  <meta name="twitter:site" content="@{{ . }}">
+  {{- end }}
+
+  {{/* JSON-LD structured data */}}
+  {{- if .IsHome -}}
+  {{- $schema := dict "@context" "https://schema.org" "@type" "WebSite" "name" .Site.Title "url" (.Site.BaseURL | absURL) -}}
+  {{- with .Site.Params.description }}{{- $schema = merge $schema (dict "description" .) -}}{{- end }}
+  <script type="application/ld+json">{{ $schema | jsonify }}</script>
+  {{- else if .IsPage -}}
+  {{- $schema := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "url" .Permalink "datePublished" (.PublishDate.Format `2006-01-02T15:04:05Z07:00`) "dateModified" (.Lastmod.Format `2006-01-02T15:04:05Z07:00`) -}}
+  {{- with .Site.Params.author }}{{- $schema = merge $schema (dict "author" (dict "@type" "Person" "name" .name)) -}}{{- end }}
+  {{- with $description }}{{- $schema = merge $schema (dict "description" .) -}}{{- end }}
+  <script type="application/ld+json">{{ $schema | jsonify }}</script>
   {{- end }}
 
   {{- range .AlternativeOutputFormats }}
@@ -32,7 +67,7 @@
   {{- $scss_files := $scss_files | append (where (resources.Match "**.scss") ".Name" "!=" $blogpaper_scss_filepath) -}}
 
   {{- range $scss_files -}}
-    {{- $css := . | resources.ExecuteAsTemplate .Name . | toCSS (dict "outputStyle" "compressed") -}}
+    {{- $css := . | resources.ExecuteAsTemplate .Name . | css.Sass (dict "outputStyle" "compressed" "transpiler" "dartsass") -}}
     {{- $css_files = $css_files | append $css -}}
   {{- end -}}
 

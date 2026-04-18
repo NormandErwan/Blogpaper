@@ -8,7 +8,7 @@ categories: # Optional, will be displayed above the title of the page
 tags: # Optional, will be displayed at the bottom end of the post
 - First tag
 - Second tag
-summary: # Optional, will be diplayed on the homepage; remove this line to generate an automatic summary (see https://gohugo.io/content-management/summaries/)
+summary: # Optional, will be displayed on the homepage; remove this line to generate an automatic summary (see https://gohugo.io/content-management/summaries/)
 draft: true
 banner:
   #src: {{ .TranslationBaseName }}.jpg # Optional, the filename of the banner, by default {{ .TranslationBaseName }}.jpg
