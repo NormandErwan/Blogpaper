@@ -116,6 +116,27 @@ the next section to configure your site and add banner images on your pages.
       href: # Optional, a link on the caption
     ```
 
+## Customise banner height
+
+Banner heights are controlled by CSS custom properties. Override them with a custom CSS file in
+your `/assets/css/` folder (see the CSS customisation entry in Troubleshooting / FAQ):
+
+| Variable | Default | Description |
+|---|---|---|
+| `--summary__banner-min-height` | `10rem` | Minimum height of banners on list/homepage cards |
+| `--summary__banner-max-height` | `30rem` | Maximum height of banners on list/homepage cards |
+| `--header--main-min-height` | `0rem` | Minimum height of the full-page header banner |
+
+Example — taller summary cards with a minimum hero height:
+
+```css
+:root {
+  --summary__banner-min-height: 20rem;
+  --summary__banner-max-height: 40rem;
+  --header--main-min-height: 50rem;
+}
+```
+
 ## Troubleshooting / FAQ
 
 - I can't generate the site.
