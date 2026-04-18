@@ -3,6 +3,11 @@ languageCode: en
 title: Blogpaper
 theme: Blogpaper
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   description: Example site for the Hugo's Blogpaper theme
   author:
